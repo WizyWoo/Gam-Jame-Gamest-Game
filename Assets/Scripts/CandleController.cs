@@ -10,14 +10,17 @@ public class CandleController : MonoBehaviour
     [SerializeField]
     private Light _light;
     [SerializeField]
-    private Transform CandleVFX;
+    private Transform CandleVFX, _candleFX, _candleWick;
     private float _candleLifeTimer, _maxIntensity;
+    private Vector3 _candleVFXStartScale, _candleWickStartPos;
 
     private void Start()
     {
 
         _candleLifeTimer = CandleLifeTime;
         _maxIntensity = _light.intensity;
+        _candleVFXStartScale = CandleVFX.localScale;
+        _candleWickStartPos = _candleWick.localPosition;
 
     }
 
@@ -40,7 +43,8 @@ public class CandleController : MonoBehaviour
         {
 
             _candleLifeTimer -= Time.deltaTime;
-            CandleVFX.localScale = new Vector3(1f, Mathf.Lerp(1f, MinCandleHeight, 1f - (_candleLifeTimer / CandleLifeTime)), 1f);
+            CandleVFX.localScale = new Vector3(_candleVFXStartScale.x, _candleVFXStartScale.y * Mathf.Lerp(1f, MinCandleHeight, 1f - (_candleLifeTimer / CandleLifeTime)), _candleVFXStartScale.z);
+            _candleWick.localPosition = new Vector3(_candleWickStartPos.x, _candleWickStartPos.y * Mathf.Lerp(1f, MinCandleHeight, 1f - (_candleLifeTimer / CandleLifeTime)), _candleWickStartPos.z);
 
         }
 
@@ -57,7 +61,7 @@ public class CandleController : MonoBehaviour
     {
 
         IsLitFam = true;
-        _light.enabled = true;
+        _candleFX.gameObject.SetActive(true);
         
     }
 
