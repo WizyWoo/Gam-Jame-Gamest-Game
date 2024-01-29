@@ -13,6 +13,11 @@ public class GhostNavigation : MonoBehaviour
     public float searchDistance = 10f; // The distance the ray is cast
     public float searchAngle = 75f; // The angle of the search
 
+    private PlayerHandsController playerhand;
+    
+
+
+
 
     public float eyesight;
 
@@ -42,6 +47,7 @@ public class GhostNavigation : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         currentStates = states.SearchPlayer;
+        playerhand = GameObject.FindWithTag("Player").GetComponent<PlayerHandsController>();
     }
 
     // Update is called once per frame
@@ -133,5 +139,76 @@ public class GhostNavigation : MonoBehaviour
 
 
     }
+
+  // New method called ghost speed, depending on "PlayerHandsController.candle" transform, if it is null, then the speed of the agent should we twice its original speed, and when candle is not null, it should be normal
+    public void GhostSpeed()
+    {
+        if (playerhand.Candle == null)
+        {
+            agent.speed = 10;
+        }
+        else
+        {
+            agent.speed = 5;
+        }
+    }
+
+    // New method called ghost sight, depending on "PlayerHandsController.candle" transform, if it is null, then the sight of the agent should we twice its original sight, and when candle is not null, it should be normal
+    public void GhostSight()
+    {
+        if (playerhand.Candle == null)
+        {
+            eyesight = 20;
+        }
+        else
+        {
+            eyesight = 10;
+        }
+    }
+
+    // New method called ghost hearing, depending on "PlayerHandsController.candle" transform, if it is null, then the hearing of the agent should we twice its original hearing, and when candle is not null, it should be normal
+    public void GhostHearing()
+    {
+        if (playerhand.Candle == null)
+        {
+            agent.angularSpeed = 100;
+        }
+        else
+        {
+            agent.angularSpeed = 50;
+        }
+    }
+
+    // New method called ghost memory, depending on "PlayerHandsController.candle" transform, if it is null, then the memory of the agent should we twice its original memory, and when candle is not null, it should be normal
+    public void GhostMemory()
+    {
+        if (playerhand.Candle == null)
+        {
+            recentlyVisitedPositions = recentlyVisitedPositions.Where(x => Time.time - x.TimeVisited < 10).ToList();
+        }
+        else
+        {
+            recentlyVisitedPositions = recentlyVisitedPositions.Where(x => Time.time - x.TimeVisited < 5).ToList();
+        }
+    }
+
+    // New method called ghost smell, depending on "PlayerHandsController.candle" transform, if it is null, then the smell of the agent should we twice its original smell, and when candle is not null, it should be normal
+    public void GhostSmell()
+    {
+        if (playerhand.Candle == null)
+        {
+            agent.acceleration = 20;
+        }
+        else
+        {
+            agent.acceleration = 10;
+        }
+    }
+
+    // New method called ghost hearing, depending on "PlayerHandsController.candle" transform, if it is null, then the hearing of the agent should we twice its
+  
+  
+
+
 }
 
