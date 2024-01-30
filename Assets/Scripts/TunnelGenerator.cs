@@ -5,6 +5,8 @@ using UnityEngine;
 public class TunnelGenerator : MonoBehaviour
 {
 
+    public GameObject[] RoomPieces;
+    public int[] MaxSpawnsAllowed;
     public static TunnelGenerator INSTANCE;
     [SerializeField]
     private GameObject TunnelBridge, TunnelMiddle;

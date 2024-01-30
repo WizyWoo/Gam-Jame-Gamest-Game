@@ -9,6 +9,7 @@ public class TunnelPieceController : MonoBehaviour
     public List<TunnelPieceController> ConnectedTunnels;
     public GameObject ZPWall, ZNWall, XPWall, XNWall;
     public bool Used, Triggered;
+    public int MaxRooms;
 
     private void Awake()
     {
