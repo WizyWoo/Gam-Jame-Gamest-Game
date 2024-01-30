@@ -20,6 +20,10 @@ public class GhostNavigation : MonoBehaviour
     private float originalY; // The original y position of the agent
     public float minHeight = 0; // The minimum height of the hover
 
+    private bool played;
+
+    private AudioSource audioSource;
+
 
 
 
@@ -49,6 +53,7 @@ public class GhostNavigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         player = GameObject.FindWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         currentStates = states.SearchPlayer;
@@ -77,6 +82,14 @@ public class GhostNavigation : MonoBehaviour
     public void ChasePlayer()
     {
         agent.SetDestination(player.transform.position);
+
+        
+        if(!played)
+        {
+            audioSource.Play();
+            played = true; 
+        }
+        
 
         //If the pllayer is outside of the agents searchdistance and searchangle, the agent should search for the player
         RaycastHit hitInfo;
@@ -109,7 +122,7 @@ public class GhostNavigation : MonoBehaviour
     public void SearchPlayer()
     {
 
-
+        played = false;
         //move to a random spot on the ground
         if (agent.remainingDistance < 0.5f)
         {
