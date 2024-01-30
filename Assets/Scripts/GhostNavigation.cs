@@ -14,7 +14,12 @@ public class GhostNavigation : MonoBehaviour
     public float searchAngle = 75f; // The angle of the search
 
     private PlayerHandsController playerhand;
-    
+
+    public float hoverHeight = 1f; // The height at which the agent hovers above the ground
+    public float hoverSpeed = 1f; // The speed at which the agent moves up and down
+    private float originalY; // The original y position of the agent
+    public float minHeight = 0; // The minimum height of the hover
+
 
 
 
@@ -48,11 +53,13 @@ public class GhostNavigation : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         currentStates = states.SearchPlayer;
         playerhand = GameObject.FindWithTag("Player").GetComponent<PlayerHandsController>();
+        originalY = minHeight;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Hover();
 
         switch (currentStates)
         {
@@ -93,7 +100,7 @@ public class GhostNavigation : MonoBehaviour
         //Debug line on the ground, to see where the agent is going
         Debug.DrawLine(transform.position, agent.destination, Color.blue);
 
-    
+
 
 
 
@@ -140,7 +147,17 @@ public class GhostNavigation : MonoBehaviour
 
     }
 
-  // New method called ghost speed, depending on "PlayerHandsController.candle" transform, if it is null, then the speed of the agent should we twice its original speed, and when candle is not null, it should be normal
+
+    // Method to make the ghost hoqer above the ground using the hoverheight and hover speed, and the original y position
+
+    public void Hover()
+    {
+        transform.position = new Vector3(transform.position.x, originalY + ((float)Math.Sin(Time.time * hoverSpeed) * hoverHeight), transform.position.z);
+        
+
+    }
+
+    // New method called ghost speed, depending on "PlayerHandsController.candle" transform, if it is null, then the speed of the agent should we twice its original speed, and when candle is not null, it should be normal
     public void GhostSpeed()
     {
         if (playerhand.Candle == null)
@@ -206,8 +223,8 @@ public class GhostNavigation : MonoBehaviour
     }
 
     // New method called ghost hearing, depending on "PlayerHandsController.candle" transform, if it is null, then the hearing of the agent should we twice its
-  
-  
+
+
 
 
 }
