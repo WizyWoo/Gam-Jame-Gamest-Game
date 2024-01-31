@@ -5,13 +5,13 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;
-    public AudioSource audioSource;
+    public AudioSource[] audioSources;
     public AudioClip[] audioClips;
 
     // Start is called before the first frame update
 
 
-    void Awake()
+  void Awake()
     {
         if (instance == null)
         {
@@ -19,8 +19,16 @@ public class SoundManager : MonoBehaviour
         }
         else if (instance != this)
         {
-            Debug.LogError("Multiple instances of SoundManager detected. Destroying the object.");
             Destroy(gameObject);
+            return;
+        }
+
+        audioSources = new AudioSource[audioClips.Length];
+        for (int i = 0; i < audioClips.Length; i++)
+        {
+            AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.clip = audioClips[i];
+            audioSources[i] = audioSource;
         }
     }
     void Start()
@@ -34,29 +42,43 @@ public class SoundManager : MonoBehaviour
 
     }
 
-    public void PlaySound(int clipIndex)
+   public void PlaySound(int clipIndex)
     {
-        if (clipIndex < 0 || clipIndex >= audioClips.Length)
+        if (clipIndex < 0 || clipIndex >= audioSources.Length)
         {
             Debug.LogError("Clip index out of range");
             return;
         }
 
-        audioSource.PlayOneShot(audioClips[clipIndex]);
+        audioSources[clipIndex].Play();
     }
-    public void StopSound()
+   public void StopSound(int clipIndex)
     {
-        audioSource.Stop();
+        if (clipIndex < 0 || clipIndex >= audioSources.Length)
+        {
+            Debug.LogError("Clip index out of range");
+            return;
+        }
+
+        audioSources[clipIndex].Stop();
     }
 
     public void PauseSound()
     {
-        audioSource.Pause();
+        for (int i = 0; i < audioSources.Length; i++)
+        {
+
+            audioSources[i].Pause();
+        }
     }
 
     public void SetPitch(float pitch)
     {
-        audioSource.pitch = pitch;
+        for (int i = 0; i < audioSources.Length; i++)
+        {
+
+            audioSources[i].pitch = pitch;
+        }
     }
 
 }

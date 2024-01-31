@@ -31,6 +31,20 @@ public class PlayerMovementController : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.B))
+        {
+            SoundManager.instance.PlaySound(1);
+        }
+
+        if (grounded && rb.velocity.magnitude > 0.1f && !SoundManager.instance.audioSources[0].isPlaying)
+        {
+            SoundManager.instance.PlaySound(0);
+        }
+        else if (!grounded || rb.velocity.magnitude < 0.1f)
+        {
+            SoundManager.instance.StopSound(0);
+        }
+
 
         if (transform.position.y < -5)
         {
@@ -145,30 +159,6 @@ public class PlayerMovementController : MonoBehaviour
 
     }
 
-    //When the player is walking, play sounds from the sound manager
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (grounded && Input.GetKey(KeyCode.W))
-        {
-            SoundManager.instance.PlaySound(0);
-        }
-        else if (grounded && Input.GetKey(KeyCode.S))
-        {
-            SoundManager.instance.PlaySound(0);
-        }
-        else if (grounded &&Input.GetKey(KeyCode.A))
-        {
-            SoundManager.instance.PlaySound(0);
-        }
-        else if (grounded &&Input.GetKey(KeyCode.D))
-        {
-            SoundManager.instance.PlaySound(0);
-        }
-
-        else
-        {
-            SoundManager.instance.StopSound();
-        }
-    }
+    
 
 }
