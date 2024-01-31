@@ -957,7 +957,8 @@ GameObject:
   - component: {fileID: 2561829984819451174}
   - component: {fileID: 531928679203219506}
   - component: {fileID: 4654014853102778808}
-  m_Layer: 0
+  - component: {fileID: 6724305847941660495}
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1050,6 +1051,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6724305847941660495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882823932073920133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 6ccb324431ce528419fa644dd9d1f828, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &6490268789175161476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,6 +1536,11 @@ MonoBehaviour:
   XPWall: {fileID: 1681740585348670523}
   XNWall: {fileID: 584905683620006718}
   MaxBranches: 2
+  ConnectedRooms: []
+  CandleSpawnPoints: []
+  MaxCandles: 0
+  MinCandles: 0
+  Candle: {fileID: 6666388076854765629, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
 --- !u!65 &7034672065869852775
 BoxCollider:
   m_ObjectHideFlags: 0
