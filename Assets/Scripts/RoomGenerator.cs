@@ -179,7 +179,7 @@ public class RoomGenerator : MonoBehaviour
 
     private void ModAvailableDir(ref Vector3 availableDir, TunnelPieceController currentRoom)
     {
-        Debug.Log("Before " + availableDir);
+        //Debug.Log("Before " + availableDir);
         if(availableDir == Vector3.forward)
         {
 
@@ -204,8 +204,7 @@ public class RoomGenerator : MonoBehaviour
             availableDir = -currentRoom.transform.right;
 
         }
-        Debug.Log("After " + availableDir);
-
+        //Debug.Log("After " + availableDir);
     }
 
 }

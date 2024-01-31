@@ -13,7 +13,7 @@ public class TunnelPieceController : MonoBehaviour
     public int MaxCandles, MinCandles;
     public GameObject Candle;
 
-    private void Awake()
+    private void Start()
     {
 
         if(CandleSpawnPoints.Count == 0)

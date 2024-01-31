@@ -86,7 +86,8 @@ public class PlayerMovementController : MonoBehaviour
 
             sprinting = SprintSpeedModifier;
             cc.Sprinting = true;
-            SoundManager.instance.SetPitch(1.5f); // Play the sound 1.5 times faster
+            if(SoundManager.instance)
+                SoundManager.instance.SetPitch(1.5f); // Play the sound 1.5 times faster
 
         }
         else
@@ -94,7 +95,8 @@ public class PlayerMovementController : MonoBehaviour
 
             sprinting = 1;
             cc.Sprinting = false;
-            SoundManager.instance.SetPitch(1f); // Play the sound 1.5 times faster
+            if(SoundManager.instance)
+                SoundManager.instance.SetPitch(1f); // Play the sound 1.5 times faster
 
         }
 
