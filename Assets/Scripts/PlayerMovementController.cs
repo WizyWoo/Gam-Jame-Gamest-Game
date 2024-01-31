@@ -9,7 +9,7 @@ public class PlayerMovementController : MonoBehaviour
     public bool DrawGizmos;
     private float sprinting, coyoteTimer;
     [SerializeField]
-    private bool grounded;
+    private bool sprintingcheck, grounded;
     private Vector3 movementDir, spawnOrigin;
     private Rigidbody rb;
     private LayerMask playerMask;
@@ -31,8 +31,22 @@ public class PlayerMovementController : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.B))
+        {
+            SoundManager.instance.PlaySound(1);
+        }
 
-        if(transform.position.y < -5)
+        if (grounded && rb.velocity.magnitude > 0.1f && !SoundManager.instance.audioSources[0].isPlaying)
+        {
+            SoundManager.instance.PlaySound(0);
+        }
+        else if (!grounded || rb.velocity.magnitude < 0.1f)
+        {
+            SoundManager.instance.StopSound(0);
+        }
+
+
+        if (transform.position.y < -5)
         {
 
             rb.velocity = Vector3.zero;
@@ -40,21 +54,21 @@ public class PlayerMovementController : MonoBehaviour
 
         }
 
-        if(Physics.CheckSphere(transform.position + groundCheckOffSet, groundCheckRad, playerMask, QueryTriggerInteraction.Ignore))
+        if (Physics.CheckSphere(transform.position + groundCheckOffSet, groundCheckRad, playerMask, QueryTriggerInteraction.Ignore))
         {
 
             grounded = true;
             coyoteTimer = CoyoteTime;
 
         }
-        else if(coyoteTimer <= 0)
+        else if (coyoteTimer <= 0)
         {
 
             grounded = false;
 
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && grounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
         {
 
             rb.velocity = new Vector3(rb.velocity.x, JumpHeight, rb.velocity.z);
@@ -62,11 +76,13 @@ public class PlayerMovementController : MonoBehaviour
 
         }
 
-        if(Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
         {
 
             sprinting = SprintSpeedModifier;
             cc.Sprinting = true;
+            SoundManager.instance.SetPitch(1.5f); // Play the sound 1.5 times faster
+
 
         }
         else
@@ -74,12 +90,14 @@ public class PlayerMovementController : MonoBehaviour
 
             sprinting = 1;
             cc.Sprinting = false;
+            SoundManager.instance.SetPitch(1f); // Play the sound 1.5 times faster
+
 
         }
-        
+
         movementDir = (transform.forward * sprinting * Input.GetAxis("Vertical") * MovementSpeed) + (transform.right * sprinting * Input.GetAxis("Horizontal") * MovementSpeed);
 
-        if(grounded)
+        if (grounded)
         {
 
             movementDir += new Vector3(0, rb.velocity.y, 0);
@@ -90,7 +108,7 @@ public class PlayerMovementController : MonoBehaviour
 
             Vector3 airControlV3 = new Vector3();
 
-            if(Mathf.Abs(rb.velocity.x) < MovementSpeed * sprinting)
+            if (Mathf.Abs(rb.velocity.x) < MovementSpeed * sprinting)
             {
 
                 airControlV3.x = movementDir.x * AirControlMult * Time.deltaTime + rb.velocity.x;
@@ -103,7 +121,7 @@ public class PlayerMovementController : MonoBehaviour
 
             }
 
-            if(Mathf.Abs(rb.velocity.z) < MovementSpeed * sprinting)
+            if (Mathf.Abs(rb.velocity.z) < MovementSpeed * sprinting)
             {
 
                 airControlV3.z = movementDir.z * AirControlMult * Time.deltaTime + rb.velocity.z;
@@ -123,7 +141,7 @@ public class PlayerMovementController : MonoBehaviour
 
         rb.velocity = movementDir;
 
-        if(coyoteTimer > 0)
+        if (coyoteTimer > 0)
             coyoteTimer -= Time.deltaTime;
 
     }
@@ -131,7 +149,7 @@ public class PlayerMovementController : MonoBehaviour
     private void OnDrawGizmos()
     {
 
-        if(DrawGizmos)
+        if (DrawGizmos)
         {
 
             Gizmos.color = Color.green;
@@ -140,5 +158,7 @@ public class PlayerMovementController : MonoBehaviour
         }
 
     }
+
+    
 
 }
