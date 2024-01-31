@@ -79,6 +79,10 @@ public class GhostNavigation : MonoBehaviour
             //when the alpa is 100%, change imagie to game over
             if (GameObject.Find("DeathCam").GetComponent<Image>().color.a >= 1)
             {
+
+                //Make the image shake violently
+                GameObject.Find("DeathCam").GetComponent<RectTransform>().anchoredPosition = new Vector3(UnityEngine.Random.Range(-30, 30), UnityEngine.Random.Range(-30, 30), 0);
+
                 GameObject.Find("DeathCam").GetComponent<Image>().sprite = jumpscare;
                 GameObject.Find("DeathCam").GetComponent<Image>().color = new Color(1, 1, 1, 1);
 
@@ -93,7 +97,7 @@ public class GhostNavigation : MonoBehaviour
                 }
 
 
-                if (restartTimer >= 6)
+                if (restartTimer >= 5)
                 {
                     //restart scene
                     UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
@@ -125,6 +129,8 @@ public class GhostNavigation : MonoBehaviour
     public void ChasePlayer()
     {
         agent.SetDestination(player.transform.position);
+        // agent speed should accelerate when chasing the player
+        agent.acceleration = 20;
 
 
         if (!played)
@@ -184,10 +190,10 @@ public class GhostNavigation : MonoBehaviour
 
     public void SearchPlayer()
     {
-
+        agent.acceleration = 10;
         played = false;
         //move to a random spot on the ground
-        if (agent.remainingDistance < 0.5f)
+        if (agent.remainingDistance <= 1)
         {
             Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * searchDistance;
             randomDirection += transform.position;
@@ -196,6 +202,21 @@ public class GhostNavigation : MonoBehaviour
             Vector3 finalPosition = hit.position;
             agent.SetDestination(finalPosition);
 
+            //repeat previusly block of code if agent has traweled for longer than 5 meters
+            
+
+            
+            if (Vector3.Distance(transform.position, player.transform.position) > 10)
+            {
+                Vector3 randomDirectionaroundP = UnityEngine.Random.insideUnitSphere * eyesight;
+                randomDirectionaroundP += player.transform.position;
+                NavMeshHit hit2;
+                NavMesh.SamplePosition(randomDirectionaroundP, out hit2, eyesight, 1);
+                Vector3 finalPosition2 = hit2.position;
+                agent.SetDestination(finalPosition2);
+            }
+
+            
 
         }
 
