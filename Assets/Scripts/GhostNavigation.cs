@@ -93,10 +93,9 @@ public class GhostNavigation : MonoBehaviour
                 }
 
 
-                if (restartTimer >= 7)
+                if (restartTimer >= 6)
                 {
                     //restart scene
-                    GameObject.Find("DeathCam").GetComponent<Image>().color = new Color(0, 0, 0, 0);
                     UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
                 }
 
