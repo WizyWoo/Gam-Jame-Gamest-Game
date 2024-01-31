@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833623872}
   m_LocalRotation: {x: 0.708152, y: -0.0027675126, z: 0.006020234, w: 0.706029}
-  m_LocalPosition: {x: 0.017, y: 0.63, z: 0.037}
+  m_LocalPosition: {x: 0.018, y: 0.359, z: 0.037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.5
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.47058824}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -287,7 +287,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.3
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -611,7 +611,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.02
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -669,7 +669,7 @@ ParticleSystem:
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 0.48
-    donutRadius: 0.2
+    donutRadius: 0.0001
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
@@ -751,7 +751,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.5
+      value: 0.2
       mode: 0
       spread: 0
       speed:
@@ -4867,7 +4867,7 @@ Transform:
   - {fileID: 1833623873}
   - {fileID: 4345968649769518578}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1156757575621339495
 MeshFilter:
@@ -4976,6 +4976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba852efcbb74ee4886b8160e829f4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chaseMaterial: {fileID: 2100000, guid: ffaae3adb2ea6584a98e596ad44d07df, type: 2}
   PlayerIsDead: 0
   jumpscare: {fileID: 21300000, guid: 4e8225e8aff0c1e42a82146bafe7791c, type: 3}
   searchDistance: 10
@@ -5146,14 +5147,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5849955914220672456}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.05601535, y: -1.3583412, z: 0.9185518}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalRotation: {x: -0.571439, y: -0, z: -0, w: 0.82064456}
+  m_LocalPosition: {x: -0.020000458, y: 0.6810875, z: 0.25242043}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1156757575621339494}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -69.701, y: 0, z: 0}
 --- !u!33 &1385682496844377356
 MeshFilter:
   m_ObjectHideFlags: 0
