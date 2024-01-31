@@ -6,10 +6,8 @@ public class TunnelPieceController : MonoBehaviour
 {
 
     public List<Vector3> Available;
-    public List<TunnelPieceController> ConnectedTunnels;
     public GameObject ZPWall, ZNWall, XPWall, XNWall;
-    public bool Used, Triggered;
-    public int MaxRooms;
+    public int MaxBranches;
 
     private void Awake()
     {
@@ -55,39 +53,6 @@ public class TunnelPieceController : MonoBehaviour
         }
         
         Available.Remove(direction);
-
-    }
-
-    public void TriggerGeneration(Vector3 forceDirection, int forwardBy = 0)
-    {
-
-        TunnelGenerator.INSTANCE.GenerateTunnelFrom(this, forceDirection, forwardBy);
-        Used = true;
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-
-        if (!Triggered && other.tag == "Player")
-        {
-
-            Triggered = true;
-            Destroy(gameObject.GetComponent<BoxCollider>());
-
-            for(int i = 0; i < ConnectedTunnels.Count; i++)
-            {
-
-                if(ConnectedTunnels[i].Used == false)
-                {
-
-                    ConnectedTunnels[i].TriggerGeneration(Vector3.zero);
-
-                }
-
-            }
-
-        }
 
     }
 

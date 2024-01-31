@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TunnelGenerator : MonoBehaviour
+/*public class TunnelGenerator : MonoBehaviour
 {
 
     public GameObject[] RoomPieces;
@@ -127,4 +127,4 @@ public class TunnelGenerator : MonoBehaviour
 
     }
 
-}
+}*/

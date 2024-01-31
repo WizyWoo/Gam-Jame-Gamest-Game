@@ -65,4 +65,12 @@ public class CandleController : MonoBehaviour
         
     }
 
+    public void GetQuenchedFam()
+    {
+
+        IsLitFam = false;
+        _candleFX.gameObject.SetActive(false);
+
+    }
+
 }

@@ -84,7 +84,6 @@ public class PlayerHandsController : MonoBehaviour
                     Candle.parent = CandleHolder;
                     Candle.localPosition = Vector3.zero;
                     Candle.localRotation = Quaternion.identity;
-                    Candle.GetComponent<CandleController>().GetLitFam();
 
                 }
 
@@ -97,14 +96,34 @@ public class PlayerHandsController : MonoBehaviour
 
             _blowEffect.Play();
 
+            if(Candle)
+            {
+
+                Candle.GetComponent<CandleController>().GetQuenchedFam();
+
+            }
+
             _blowTimer = 0.5f;
             _blows++;
 
-            if(_blows >= 3)
+            if(_blows >= 5)
             {
 
-                Instantiate(_diaphragm, transform.position + (transform.forward * 0.4f), transform.rotation).GetComponent<Rigidbody>().velocity = transform.forward * 10;
+                _blows = 0;
+                Instantiate(_diaphragm, transform.position + (transform.forward * 0.4f) + (transform.up * 0.2f), transform.rotation).GetComponent<Rigidbody>().velocity = transform.forward * 10;
                 _diaphragmEffect.Play();
+
+            }
+
+        }
+
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+
+            if(Candle)
+            {
+
+                Candle.GetComponent<CandleController>().GetLitFam();
 
             }
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8564305273284625463}
   - component: {fileID: 7142911226759880395}
   - component: {fileID: 4132862369776588243}
+  - component: {fileID: 1226908848445246663}
   m_Layer: 8
   m_Name: diaphragm
   m_TagString: Untagged
@@ -83,6 +84,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1226908848445246663
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3636352720239562082}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.24863149, y: 0.16912246, z: 0.156367}
+  m_Center: {x: 0, y: -0.000000011175871, z: -0.000000011175871}
 --- !u!1 &6345980381904659332
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +136,7 @@ Transform:
   m_Children:
   - {fileID: 8564305273284625463}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6580764821657402432
 Rigidbody:
