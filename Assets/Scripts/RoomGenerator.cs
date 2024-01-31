@@ -89,8 +89,10 @@ public class RoomGenerator : MonoBehaviour
         }
 
         NavMeshSurface navMesh = navmeshObj.AddComponent<NavMeshSurface>();
-        navMesh.ignoreNavMeshObstacle = true;
+        navmeshObj.transform.position = Vector3.up * 100 + Vector3.right * 100;
         navMesh.BuildNavMesh();
+        navmeshObj.transform.position = Vector3.zero;
+
 
     }
 
