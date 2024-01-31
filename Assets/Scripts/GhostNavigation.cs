@@ -8,7 +8,9 @@ using UnityEngine.UI;
 using Unity.AI.Navigation;
 public class GhostNavigation : MonoBehaviour
 {
-
+    private Material initialMaterial;
+    public Material chaseMaterial;
+    private MeshRenderer renderer;
     public bool PlayerIsDead;
     private NavMeshAgent agent;
     public Sprite jumpscare;
@@ -59,6 +61,7 @@ public class GhostNavigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        renderer = GetComponentInChildren<MeshRenderer>();
         NavMeshLink link = GetComponent<NavMeshLink>();
         audioSource = GetComponent<AudioSource>();
         player = GameObject.FindWithTag("Player");
@@ -129,6 +132,12 @@ public class GhostNavigation : MonoBehaviour
     public void ChasePlayer()
     {
         agent.SetDestination(player.transform.position);
+        StartCoroutine(ChangeMaterialOverTime(chaseMaterial, 1f)); // Change material over 1 second
+
+
+
+
+
         // agent speed should accelerate when chasing the player
         agent.acceleration = 20;
 
@@ -190,6 +199,8 @@ public class GhostNavigation : MonoBehaviour
 
     public void SearchPlayer()
     {
+        StartCoroutine(ChangeMaterialOverTime(initialMaterial, 1f)); // Change material back over 1 second
+        //slowly change to material0 from material1
         agent.acceleration = 10;
         played = false;
         //move to a random spot on the ground
@@ -203,12 +214,12 @@ public class GhostNavigation : MonoBehaviour
             agent.SetDestination(finalPosition);
 
             //repeat previusly block of code if agent has traweled for longer than 5 meters
-            
 
-            
-            if (Vector3.Distance(transform.position, player.transform.position) > 10)
+
+
+            if (Vector3.Distance(transform.position, player.transform.position) > 40)
             {
-                Vector3 randomDirectionaroundP = UnityEngine.Random.insideUnitSphere * eyesight;
+                Vector3 randomDirectionaroundP = UnityEngine.Random.insideUnitSphere * eyesight * 3;
                 randomDirectionaroundP += player.transform.position;
                 NavMeshHit hit2;
                 NavMesh.SamplePosition(randomDirectionaroundP, out hit2, eyesight, 1);
@@ -216,7 +227,7 @@ public class GhostNavigation : MonoBehaviour
                 agent.SetDestination(finalPosition2);
             }
 
-            
+
 
         }
 
@@ -265,6 +276,23 @@ public class GhostNavigation : MonoBehaviour
         {
             agent.speed = 5;
         }
+    }
+
+
+    IEnumerator ChangeMaterialOverTime(Material targetMaterial, float duration)
+    {
+        Material currentMaterial = renderer.material;
+        float startTime = Time.time;
+
+        while (Time.time - startTime < duration)
+        {
+            float t = (Time.time - startTime) / duration;
+            Color color = Color.Lerp(currentMaterial.color, targetMaterial.color, t);
+            renderer.material.color = color;
+            yield return null;
+        }
+
+        renderer.material = targetMaterial;
     }
 
 
