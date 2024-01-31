@@ -497,8 +497,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sprinting: 0
   CameraInputEnabled: 1
-  InputSensitivity: 4
-  FovChangeSpeed: 2
+  InputSensitivity: 3
+  FovChangeSpeed: 5
   cameraPivot: {fileID: 983552336383430839}
 --- !u!114 &3971548466291129556
 MonoBehaviour:
@@ -624,7 +624,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983552337212266497}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8bc8b0673bf7eea478d188138cf82203, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -713,7 +713,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165946549088461942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.407, y: -0.354, z: 0.494}
+  m_LocalPosition: {x: 0.49, y: -0.483, z: 0.494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

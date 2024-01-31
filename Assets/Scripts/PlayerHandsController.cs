@@ -123,7 +123,28 @@ public class PlayerHandsController : MonoBehaviour
             if(Candle)
             {
 
-                Candle.GetComponent<CandleController>().GetLitFam();
+                if(!Candle.GetComponent<CandleController>().IsLitFam)
+                    Candle.GetComponent<CandleController>().GetLitFam();
+                else if(Candle.GetComponent<CandleController>().IsLitFam)
+                {
+
+                    _blowEffect.Play();
+                    SoundManager.instance.PlaySound(1);
+                    Candle.GetComponent<CandleController>().GetQuenchedFam();
+
+                    _blowTimer = 0.5f;
+                    _blows++;
+
+                    if(_blows >= 5)
+                    {
+
+                        _blows = 0;
+                        Instantiate(_diaphragm, transform.position + (transform.forward * 0.4f) + (transform.up * 0.2f), transform.rotation).GetComponent<Rigidbody>().velocity = transform.forward * 10;
+                        _diaphragmEffect.Play();
+
+                    }
+
+                }
 
             }
 

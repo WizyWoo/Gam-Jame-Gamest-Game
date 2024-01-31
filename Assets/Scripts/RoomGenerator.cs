@@ -13,14 +13,8 @@ public class RoomGenerator : MonoBehaviour
     public List<int> MaxSpawnsAllowed;
     [SerializeField]
     private TunnelPieceController _startPiece;
-    private struct _roomLoc
-    {
-
-        public Vector2 Location;
-        public TunnelPieceController PieceController;
-
-    }
-    private List<_roomLoc> _rooms;
+    [SerializeField]
+    private List<Vector2> _rooms;
     [SerializeField]
     private List<TunnelPieceController> _unProcessedRooms;
     [SerializeField]
@@ -29,12 +23,12 @@ public class RoomGenerator : MonoBehaviour
     private void Awake()
     {
 
-        _rooms = new List<_roomLoc>();
+        _rooms = new List<Vector2>();
         _unProcessedRooms = new List<TunnelPieceController>();
         _generatedRooms = new List<TunnelPieceController>();
         _unProcessedRooms.Add(_startPiece);
         _generatedRooms.Add(_startPiece);
-        _rooms.Add(new _roomLoc() { Location = new Vector2((int)_startPiece.transform.position.x, (int)_startPiece.transform.position.z), PieceController = _startPiece });
+        _rooms.Add(new Vector2((int)_startPiece.transform.position.x, (int)_startPiece.transform.position.z));
 
         int max = 50, x = 0;
         bool allRoomsProcessed = false;
@@ -149,10 +143,10 @@ public class RoomGenerator : MonoBehaviour
     private bool CheckLoc(Vector3 location)
     {
 
-        foreach(_roomLoc room in _rooms)
+        foreach(Vector2 room in _rooms)
         {
 
-            if(room.Location == new Vector2((int)location.x, (int)location.z))
+            if(room == new Vector2((int)location.x, (int)location.z))
             {
 
                 return true;
@@ -203,7 +197,7 @@ public class RoomGenerator : MonoBehaviour
 
         currentRoom.ConnectedRooms.Add(newRoom);
 
-        _rooms.Add(new _roomLoc() { Location = new Vector2((int)newRoom.transform.position.x, (int)newRoom.transform.position.z), PieceController = newRoom });
+        _rooms.Add(new Vector2((int)newRoom.transform.position.x, (int)newRoom.transform.position.z));
         _unProcessedRooms.Add(newRoom);
         _generatedRooms.Add(newRoom);
 
