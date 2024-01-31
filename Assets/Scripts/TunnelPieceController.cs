@@ -8,19 +8,25 @@ public class TunnelPieceController : MonoBehaviour
     public List<Vector3> Available;
     public GameObject ZPWall, ZNWall, XPWall, XNWall;
     public int MaxBranches;
+    public List<TunnelPieceController> ConnectedRooms;
+    public List<Transform> CandleSpawnPoints;
+    public int MaxCandles, MinCandles;
+    public GameObject Candle;
 
     private void Awake()
     {
 
-        Available = new List<Vector3>()
+        int x = Random.Range(MinCandles, MaxCandles);
+
+        for(int i = 0; i < x; i++)
         {
-                
-            Vector3.forward,
-            Vector3.back,
-            Vector3.right,
-            Vector3.left
-    
-        };
+
+            int y = Random.Range(0, CandleSpawnPoints.Count);
+
+            Instantiate(Candle, CandleSpawnPoints[y].position, Quaternion.identity);
+            CandleSpawnPoints.RemoveAt(y);
+
+        }
 
     }
 

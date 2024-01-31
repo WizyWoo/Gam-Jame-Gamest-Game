@@ -543,13 +543,11 @@ MonoBehaviour:
   Available:
   - {x: 0, y: 0, z: 1}
   - {x: 0, y: 0, z: -1}
-  ConnectedTunnels: []
   ZPWall: {fileID: 3735745343015081798}
   ZNWall: {fileID: 8849307057426432131}
   XPWall: {fileID: 6001536173462910500}
   XNWall: {fileID: 5476662891404744993}
-  Used: 0
-  Triggered: 0
+  MaxBranches: 2
 --- !u!65 &2719944944515048056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -694,7 +692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3747741377972186564
 Transform:
   m_ObjectHideFlags: 0
@@ -1429,7 +1427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3914162447567468544
 Transform:
   m_ObjectHideFlags: 0

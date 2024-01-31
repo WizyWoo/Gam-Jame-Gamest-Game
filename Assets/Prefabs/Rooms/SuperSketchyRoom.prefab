@@ -248,13 +248,11 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 1}
   - {x: 1, y: 0, z: 0}
   - {x: -1, y: 0, z: 0}
-  ConnectedTunnels: []
   ZPWall: {fileID: 256708805022747844}
   ZNWall: {fileID: 5370267913450281729}
   XPWall: {fileID: 7134184009462623654}
   XNWall: {fileID: 8955698365901636259}
-  Used: 0
-  Triggered: 0
+  MaxBranches: 3
 --- !u!65 &1582773723580283386
 BoxCollider:
   m_ObjectHideFlags: 0
