@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
 using UnityEngine.UI;
-using Unity.Services.Lobbies.Models;
-
+using Unity.AI.Navigation;
 public class GhostNavigation : MonoBehaviour
 {
 
@@ -60,6 +59,7 @@ public class GhostNavigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        NavMeshLink link = GetComponent<NavMeshLink>();
         audioSource = GetComponent<AudioSource>();
         player = GameObject.FindWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
