@@ -9,12 +9,30 @@ public class PlayerHandsController : MonoBehaviour
     [SerializeField]
     private float _placeDistance;
     [SerializeField]
-    private GameObject _candleErrorPrefab;
+    private GameObject _candleErrorPrefab, _diaphragm;
+    [SerializeField]
+    private ParticleSystem _blowEffect, _diaphragmEffect;
     [SerializeField]
     private Vector3 _placeCheckOffset, _safetyBox;
+    private int _blows;
+    private float _blowTimer;
 
     private void Update()
     {
+
+        if(_blowTimer > 0)
+        {
+
+            _blowTimer -= Time.deltaTime;
+            if(_blowTimer <= 0)
+            {
+
+                _blowTimer = 0;
+                _blows = 0;
+
+            }
+
+        }
 
         if(Input.GetKeyDown(KeyCode.E))
         {
@@ -69,6 +87,24 @@ public class PlayerHandsController : MonoBehaviour
                     Candle.GetComponent<CandleController>().GetLitFam();
 
                 }
+
+            }
+
+        }
+
+        if(Input.GetKeyDown(KeyCode.B))
+        {
+
+            _blowEffect.Play();
+
+            _blowTimer = 0.5f;
+            _blows++;
+
+            if(_blows >= 3)
+            {
+
+                Instantiate(_diaphragm, transform.position + (transform.forward * 0.4f), transform.rotation).GetComponent<Rigidbody>().velocity = transform.forward * 10;
+                _diaphragmEffect.Play();
 
             }
 
