@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4863545838929541677}
   - component: {fileID: 326900908995406759}
   - component: {fileID: 4012499863835812615}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 2442384306952570912}
   - component: {fileID: 6875479220722054919}
   - component: {fileID: 305312726361784772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ZPWall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,8 +164,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917095257813054531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 2, z: -7.5}
-  m_LocalScale: {x: 5, y: 4, z: 0.5}
+  m_LocalPosition: {x: 5, y: 2, z: -7.375}
+  m_LocalScale: {x: 5, y: 4, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1404701093184201387}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 6563026787792829139}
   - component: {fileID: 8732843826448290333}
   - component: {fileID: 1993252402576989534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: XNWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,8 +269,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2165407265739128987}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 2, z: -5}
-  m_LocalScale: {x: 0.5, y: 4, z: 5}
+  m_LocalPosition: {x: -7.375, y: 2, z: -5}
+  m_LocalScale: {x: 0.25, y: 4, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1404701093184201387}
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 6264217203560368450}
   - component: {fileID: 1591213712106730589}
   - component: {fileID: 616102351807316348}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ZPWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,8 +374,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2252900748755596413}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 2, z: 7.5}
-  m_LocalScale: {x: 5, y: 4, z: 0.5}
+  m_LocalPosition: {x: -5, y: 2, z: 7.375}
+  m_LocalScale: {x: 5, y: 4, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1404701093184201387}
@@ -461,7 +461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1404701093184201387}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Static
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 5274689992865093806}
   - component: {fileID: 5973723807715831642}
   - component: {fileID: 2719944944515048056}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ScetchyBathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 1123934675349182112}
   - component: {fileID: 8468447235594855226}
   - component: {fileID: 6610862108386215502}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 6171063540778869800}
   - component: {fileID: 8480890845027503376}
   - component: {fileID: 3394785946274120670}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ZPWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,8 +738,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3735745343015081798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 7.5}
-  m_LocalScale: {x: 15.5, y: 4, z: 0.5}
+  m_LocalPosition: {x: 0, y: 2, z: 7.375}
+  m_LocalScale: {x: 5, y: 4, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5274689992865093806}
@@ -828,7 +828,7 @@ GameObject:
   - component: {fileID: 1630488140600747984}
   - component: {fileID: 9091927781668315969}
   - component: {fileID: 608630915534578123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: XNWall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,8 +843,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5177346063195871731}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 2, z: -5}
-  m_LocalScale: {x: 0.5, y: 4, z: 5}
+  m_LocalPosition: {x: 7.375, y: 2, z: -5}
+  m_LocalScale: {x: 0.25, y: 4, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1404701093184201387}
@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 1668122991755822603}
   - component: {fileID: 4757504020456879231}
   - component: {fileID: 1144884742388515863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: XNWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,8 +948,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5466831428778015700}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 2, z: 5}
-  m_LocalScale: {x: 0.5, y: 4, z: 5}
+  m_LocalPosition: {x: -7.375, y: 2, z: 5}
+  m_LocalScale: {x: 0.25, y: 4, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1404701093184201387}
@@ -1038,7 +1038,7 @@ GameObject:
   - component: {fileID: 6678470751575888259}
   - component: {fileID: 6528083981995290843}
   - component: {fileID: 2156458860582979642}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: XNWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1053,8 +1053,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5476662891404744993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 2, z: 0}
-  m_LocalScale: {x: 0.5, y: 4, z: 15.5}
+  m_LocalPosition: {x: -7.375, y: 2, z: 0}
+  m_LocalScale: {x: 0.25, y: 4, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5274689992865093806}
@@ -1143,7 +1143,7 @@ GameObject:
   - component: {fileID: 8877305502610213475}
   - component: {fileID: 8827297679078952488}
   - component: {fileID: 6455178230759785024}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: XPWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,8 +1158,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6001536173462910500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 2, z: 0}
-  m_LocalScale: {x: 0.5, y: 4, z: 15.5}
+  m_LocalPosition: {x: 7.375, y: 2, z: 0}
+  m_LocalScale: {x: 0.25, y: 4, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5274689992865093806}
@@ -1248,7 +1248,7 @@ GameObject:
   - component: {fileID: 6648412841977786341}
   - component: {fileID: 6799241060136267486}
   - component: {fileID: 5635469901097705861}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1353,7 +1353,7 @@ GameObject:
   - component: {fileID: 5299116669036313190}
   - component: {fileID: 4158100974502480508}
   - component: {fileID: 3697727053625698058}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ZPWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1368,8 +1368,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6936510455566370773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 2, z: 7.5}
-  m_LocalScale: {x: 5, y: 4, z: 0.5}
+  m_LocalPosition: {x: 5, y: 2, z: 7.375}
+  m_LocalScale: {x: 5, y: 4, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1404701093184201387}
@@ -1458,7 +1458,7 @@ GameObject:
   - component: {fileID: 7212499396899700416}
   - component: {fileID: 4174698212097478087}
   - component: {fileID: 9015969184839310860}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ZNWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,8 +1473,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8849307057426432131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -7.5}
-  m_LocalScale: {x: 15.5, y: 4, z: 0.5}
+  m_LocalPosition: {x: 0, y: 2, z: -7.375}
+  m_LocalScale: {x: 5, y: 4, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5274689992865093806}
@@ -1563,7 +1563,7 @@ GameObject:
   - component: {fileID: 8683643125620267778}
   - component: {fileID: 4319425515458669414}
   - component: {fileID: 9215938754667187688}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: XNWall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1578,8 +1578,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9006547922538740255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 2, z: 5}
-  m_LocalScale: {x: 0.5, y: 4, z: 5}
+  m_LocalPosition: {x: 7.375, y: 2, z: 5}
+  m_LocalScale: {x: 0.25, y: 4, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1404701093184201387}
@@ -1668,7 +1668,7 @@ GameObject:
   - component: {fileID: 735767960389585019}
   - component: {fileID: 4830418633341804703}
   - component: {fileID: 5748767441446849777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ZPWall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1683,8 +1683,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9067692027365079884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 2, z: -7.5}
-  m_LocalScale: {x: 5, y: 4, z: 0.5}
+  m_LocalPosition: {x: -5, y: 2, z: -7.375}
+  m_LocalScale: {x: 5, y: 4, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1404701093184201387}
@@ -1773,6 +1773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tap
       objectReference: {fileID: 0}
+    - target: {fileID: 1956932028163508, guid: 5235cab164657264b9fd0e97c8653b3a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4593319749463374, guid: 5235cab164657264b9fd0e97c8653b3a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1838,6 +1842,10 @@ PrefabInstance:
     - target: {fileID: 1651318158118966, guid: 306b28a0b192dc6469686df4b6c4340d, type: 3}
       propertyPath: m_Name
       value: Bath
+      objectReference: {fileID: 0}
+    - target: {fileID: 1651318158118966, guid: 306b28a0b192dc6469686df4b6c4340d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4261581823951818, guid: 306b28a0b192dc6469686df4b6c4340d, type: 3}
       propertyPath: m_RootOrder
@@ -1909,6 +1917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CupboardLight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1782625778920384, guid: 285481860f04d3648a939f684d9f5ff5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4331104951942214, guid: 285481860f04d3648a939f684d9f5ff5, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1975,9 +1987,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5274689992865093806}
     m_Modifications:
+    - target: {fileID: 1243213619161508, guid: e8482d0feb18bec448406b8e4baa6eb7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1332779490389988, guid: e8482d0feb18bec448406b8e4baa6eb7, type: 3}
       propertyPath: m_Name
       value: MedRack
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332779490389988, guid: e8482d0feb18bec448406b8e4baa6eb7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448683494436694, guid: e8482d0feb18bec448406b8e4baa6eb7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752023429364196, guid: e8482d0feb18bec448406b8e4baa6eb7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4011105430476802, guid: e8482d0feb18bec448406b8e4baa6eb7, type: 3}
       propertyPath: m_RootOrder
@@ -2057,6 +2085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pipe (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4796547210145694, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2131,6 +2163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tap (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1956932028163508, guid: 5235cab164657264b9fd0e97c8653b3a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4593319749463374, guid: 5235cab164657264b9fd0e97c8653b3a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2196,6 +2232,10 @@ PrefabInstance:
     - target: {fileID: 1896530712685836, guid: c877372ff1967b643abbc85801fc3ce2, type: 3}
       propertyPath: m_Name
       value: Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896530712685836, guid: c877372ff1967b643abbc85801fc3ce2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4245446863089872, guid: c877372ff1967b643abbc85801fc3ce2, type: 3}
       propertyPath: m_RootOrder
@@ -2267,6 +2307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sink_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 1516575278526956, guid: 30577724fca9edb43bab2188e72a1cc1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4861849809368556, guid: 30577724fca9edb43bab2188e72a1cc1, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2336,6 +2380,10 @@ PrefabInstance:
     - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_Name
       value: Pipe (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4796547210145694, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_RootOrder
@@ -2411,6 +2459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TableWhiteKitchen
       objectReference: {fileID: 0}
+    - target: {fileID: 1246180960294942, guid: 0f96da9664a6d9342bc8d0a3254c96bf, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4057839852189204, guid: 0f96da9664a6d9342bc8d0a3254c96bf, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2481,6 +2533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheelChair
       objectReference: {fileID: 0}
+    - target: {fileID: 1256123131733362, guid: f87ea19ec8f4e174eb4c5dd88e9e2ab7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4599819051712632, guid: f87ea19ec8f4e174eb4c5dd88e9e2ab7, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2550,6 +2606,10 @@ PrefabInstance:
     - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_Name
       value: Pipe (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4796547210145694, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_RootOrder
@@ -2625,6 +2685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heater
       objectReference: {fileID: 0}
+    - target: {fileID: 1270857098791048, guid: 35e841b08485a4c4ca32bd075e78e006, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4525979494391414, guid: 35e841b08485a4c4ca32bd075e78e006, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2694,6 +2758,10 @@ PrefabInstance:
     - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_Name
       value: Pipe (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4796547210145694, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_RootOrder
@@ -2768,6 +2836,10 @@ PrefabInstance:
     - target: {fileID: 1987219709043866, guid: b9f6e7b74ed89574598f26acba3afa74, type: 3}
       propertyPath: m_Name
       value: Carpet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987219709043866, guid: b9f6e7b74ed89574598f26acba3afa74, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4954249734721646, guid: b9f6e7b74ed89574598f26acba3afa74, type: 3}
       propertyPath: m_RootOrder
@@ -2847,6 +2919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CupboardLight
       objectReference: {fileID: 0}
+    - target: {fileID: 1782625778920384, guid: 285481860f04d3648a939f684d9f5ff5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4331104951942214, guid: 285481860f04d3648a939f684d9f5ff5, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2917,6 +2993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heater (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1270857098791048, guid: 35e841b08485a4c4ca32bd075e78e006, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4525979494391414, guid: 35e841b08485a4c4ca32bd075e78e006, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2982,6 +3062,10 @@ PrefabInstance:
     - target: {fileID: 1605126930946088, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
       propertyPath: m_Name
       value: BigShelf_Stock
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605126930946088, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4105631882345270, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
       propertyPath: m_RootOrder
@@ -3053,6 +3137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank_V2
       objectReference: {fileID: 0}
+    - target: {fileID: 1039335525940132, guid: afb2c49747667614293fe2384cf95956, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4609995730315160, guid: afb2c49747667614293fe2384cf95956, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3123,6 +3211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank_V2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1039335525940132, guid: afb2c49747667614293fe2384cf95956, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4609995730315160, guid: afb2c49747667614293fe2384cf95956, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3192,6 +3284,10 @@ PrefabInstance:
     - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_Name
       value: Pipe (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4796547210145694, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_RootOrder
@@ -3267,6 +3363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FilmProjector
       objectReference: {fileID: 0}
+    - target: {fileID: 1115447403126146, guid: c8cedd07f9c0b814b9e331a2d713786f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4505399727380864, guid: c8cedd07f9c0b814b9e331a2d713786f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3333,9 +3433,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5274689992865093806}
     m_Modifications:
+    - target: {fileID: 1057407362373734, guid: 51d7dfbf96b72654ea7afc3829c6bd8c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255073972176746, guid: 51d7dfbf96b72654ea7afc3829c6bd8c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1767424424517848, guid: 51d7dfbf96b72654ea7afc3829c6bd8c, type: 3}
       propertyPath: m_Name
       value: MirrorShelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767424424517848, guid: 51d7dfbf96b72654ea7afc3829c6bd8c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995019458802806, guid: 51d7dfbf96b72654ea7afc3829c6bd8c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4415243896484894, guid: 51d7dfbf96b72654ea7afc3829c6bd8c, type: 3}
       propertyPath: m_RootOrder
@@ -3403,9 +3519,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5274689992865093806}
     m_Modifications:
+    - target: {fileID: 161004425630300011, guid: ff753e626a72309498f50c5278aa1d91, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 161004425630300013, guid: ff753e626a72309498f50c5278aa1d91, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 161004425630300015, guid: ff753e626a72309498f50c5278aa1d91, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2450716880731872317, guid: ff753e626a72309498f50c5278aa1d91, type: 3}
       propertyPath: m_Name
       value: DoorWay
+      objectReference: {fileID: 0}
+    - target: {fileID: 2450716880731872317, guid: ff753e626a72309498f50c5278aa1d91, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550693957147950407, guid: ff753e626a72309498f50c5278aa1d91, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408319721823196321, guid: ff753e626a72309498f50c5278aa1d91, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7720089528937334847, guid: ff753e626a72309498f50c5278aa1d91, type: 3}
       propertyPath: m_RootOrder
@@ -3451,6 +3591,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8335541208451221804, guid: ff753e626a72309498f50c5278aa1d91, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3472,6 +3616,10 @@ PrefabInstance:
     - target: {fileID: 1250431392479228, guid: e8c8077be5ad00c49a81c31c4c685952, type: 3}
       propertyPath: m_Name
       value: Bathroom_Shower (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250431392479228, guid: e8c8077be5ad00c49a81c31c4c685952, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4539958299235618, guid: e8c8077be5ad00c49a81c31c4c685952, type: 3}
       propertyPath: m_RootOrder
@@ -3543,6 +3691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toilet
       objectReference: {fileID: 0}
+    - target: {fileID: 1388454127239568, guid: 46c720c56146e4848814a54b4715d58f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4456962508224272, guid: 46c720c56146e4848814a54b4715d58f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3612,6 +3764,10 @@ PrefabInstance:
     - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_Name
       value: Pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4796547210145694, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_RootOrder
@@ -3686,6 +3842,10 @@ PrefabInstance:
     - target: {fileID: 1250431392479228, guid: e8c8077be5ad00c49a81c31c4c685952, type: 3}
       propertyPath: m_Name
       value: Bathroom_Shower
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250431392479228, guid: e8c8077be5ad00c49a81c31c4c685952, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4539958299235618, guid: e8c8077be5ad00c49a81c31c4c685952, type: 3}
       propertyPath: m_RootOrder

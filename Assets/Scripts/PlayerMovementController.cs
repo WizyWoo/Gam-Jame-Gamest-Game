@@ -31,20 +31,25 @@ public class PlayerMovementController : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.B))
-        {
-            SoundManager.instance.PlaySound(1);
-        }
 
-        if (grounded && rb.velocity.magnitude > 0.1f && !SoundManager.instance.audioSources[0].isPlaying)
+        if(SoundManager.instance)
         {
-            SoundManager.instance.PlaySound(0);
-        }
-        else if (!grounded || rb.velocity.magnitude < 0.1f)
-        {
-            SoundManager.instance.StopSound(0);
-        }
 
+            if(Input.GetKeyDown(KeyCode.B))
+            {
+                SoundManager.instance.PlaySound(1);
+            }
+
+            if (grounded && rb.velocity.magnitude > 0.1f && !SoundManager.instance.audioSources[0].isPlaying)
+            {
+                SoundManager.instance.PlaySound(0);
+            }
+            else if (!grounded || rb.velocity.magnitude < 0.1f)
+            {
+                SoundManager.instance.StopSound(0);
+            }
+
+        }
 
         if (transform.position.y < -5)
         {
@@ -83,7 +88,6 @@ public class PlayerMovementController : MonoBehaviour
             cc.Sprinting = true;
             SoundManager.instance.SetPitch(1.5f); // Play the sound 1.5 times faster
 
-
         }
         else
         {
@@ -91,7 +95,6 @@ public class PlayerMovementController : MonoBehaviour
             sprinting = 1;
             cc.Sprinting = false;
             SoundManager.instance.SetPitch(1f); // Play the sound 1.5 times faster
-
 
         }
 

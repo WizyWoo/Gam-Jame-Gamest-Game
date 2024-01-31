@@ -16,6 +16,9 @@ public class TunnelPieceController : MonoBehaviour
     private void Awake()
     {
 
+        if(CandleSpawnPoints.Count == 0)
+            return;
+
         int x = Random.Range(MinCandles, MaxCandles);
 
         for(int i = 0; i < x; i++)

@@ -4901,7 +4901,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3414859947055762240}
-  m_Mesh: {fileID: 2534964839176971238, guid: 80521f4c6034b8447b1ade048a979a2d, type: 3}
+  m_Mesh: {fileID: 2534964839176971238, guid: 13c1c6ab9c673854f8e726e3c3cb834d, type: 3}
 --- !u!23 &9092403866445378463
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5138,8 +5138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa65c2bc4e612647b1e2d9aad0763aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CandleLifeTime: 60
-  LightDimmingThreshold: 20
+  CandleLifeTime: 100
+  LightDimmingThreshold: 30
   MinIntensity: 0.15
   MinCandleHeight: 0.15
   IsLitFam: 0
@@ -5188,7 +5188,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7780640487210263667}
-  m_Mesh: {fileID: -7387706064836869012, guid: 80521f4c6034b8447b1ade048a979a2d, type: 3}
+  m_Mesh: {fileID: -7387706064836869012, guid: 13c1c6ab9c673854f8e726e3c3cb834d, type: 3}
 --- !u!23 &9222472497416252922
 MeshRenderer:
   m_ObjectHideFlags: 0
