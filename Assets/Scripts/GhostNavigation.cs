@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
+using UnityEngine.UI;
+using Unity.Services.Lobbies.Models;
 
 public class GhostNavigation : MonoBehaviour
 {
 
+    public bool PlayerIsDead;
     private NavMeshAgent agent;
+    public Sprite jumpscare;
     private GameObject player;
     public float searchDistance = 10f; // The distance the ray is cast
     public float searchAngle = 75f; // The angle of the search
@@ -20,9 +24,12 @@ public class GhostNavigation : MonoBehaviour
     private float originalY; // The original y position of the agent
     public float minHeight = 0; // The minimum height of the hover
 
-    private bool played;
+    private bool played, SFXplayed;
 
     private AudioSource audioSource;
+    public AudioSource jumpscareSFX;
+
+    public float restartTimer;
 
 
 
@@ -57,14 +64,51 @@ public class GhostNavigation : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         currentStates = states.SearchPlayer;
-        playerhand = GameObject.FindWithTag("Player").GetComponent<PlayerHandsController>();
+        playerhand = Camera.main.GetComponent<PlayerHandsController>();
         originalY = minHeight;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (PlayerIsDead)
+        {
+            GameObject.Find("DeathCam").GetComponent<Image>().color = new Color(0, 0, 0, GameObject.Find("DeathCam").GetComponent<Image>().color.a + Time.deltaTime);
+
+            //when the alpa is 100%, change imagie to game over
+            if (GameObject.Find("DeathCam").GetComponent<Image>().color.a >= 1)
+            {
+                GameObject.Find("DeathCam").GetComponent<Image>().sprite = jumpscare;
+                GameObject.Find("DeathCam").GetComponent<Image>().color = new Color(1, 1, 1, 1);
+
+                restartTimer += Time.deltaTime;
+                Debug.Log(restartTimer);
+
+                if (!SFXplayed)
+                {
+                    jumpscareSFX.Play();
+                    SFXplayed = true;
+
+                }
+
+
+                if (restartTimer >= 7)
+                {
+                    //restart scene
+                    GameObject.Find("DeathCam").GetComponent<Image>().color = new Color(0, 0, 0, 0);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+                }
+
+
+            }
+
+        }
+
+
+
         Hover();
+        playerHasLight();
 
         switch (currentStates)
         {
@@ -83,13 +127,13 @@ public class GhostNavigation : MonoBehaviour
     {
         agent.SetDestination(player.transform.position);
 
-        
-        if(!played)
+
+        if (!played)
         {
             audioSource.Play();
-            played = true; 
+            played = true;
         }
-        
+
 
         //If the pllayer is outside of the agents searchdistance and searchangle, the agent should search for the player
         RaycastHit hitInfo;
@@ -113,8 +157,28 @@ public class GhostNavigation : MonoBehaviour
         //Debug line on the ground, to see where the agent is going
         Debug.DrawLine(transform.position, agent.destination, Color.blue);
 
+        // if the agent is within 0.5 units from the player, a canvas screen should pop up, and the player should be dead, ignore y position
+        if (Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(player.transform.position.x, 0, player.transform.position.z)) < 1)
+        {
+            PlayerIsDead = true;
+            //Stop the agent from moving
+            agent.SetDestination(transform.position);
+            //destroy movement controller on pøayer
+            player.GetComponent<PlayerMovementController>().enabled = false;
+            player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            player.GetComponent<Rigidbody>().velocity = agent.transform.forward * 10;
+        }
 
 
+
+
+
+    }
+
+
+
+    public void KilledPlayer()
+    {
 
 
     }
@@ -166,7 +230,7 @@ public class GhostNavigation : MonoBehaviour
     public void Hover()
     {
         transform.position = new Vector3(transform.position.x, originalY + ((float)Math.Sin(Time.time * hoverSpeed) * hoverHeight), transform.position.z);
-        
+
 
     }
 
@@ -180,6 +244,20 @@ public class GhostNavigation : MonoBehaviour
         else
         {
             agent.speed = 5;
+        }
+    }
+
+
+    public void playerHasLight()
+    {
+
+        if (playerhand.Candle != null && playerhand.Candle.GetComponent<CandleController>().IsLitFam == true)
+        {
+            searchDistance = searchAngle * 2;
+        }
+        else
+        {
+            searchDistance = 10;
         }
     }
 

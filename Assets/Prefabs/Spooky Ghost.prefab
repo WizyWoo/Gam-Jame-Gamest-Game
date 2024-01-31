@@ -4866,7 +4866,7 @@ Transform:
   m_Children:
   - {fileID: 1833623873}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1156757575621339495
 MeshFilter:
@@ -4975,11 +4975,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba852efcbb74ee4886b8160e829f4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerIsDead: 0
+  jumpscare: {fileID: 21300000, guid: 4e8225e8aff0c1e42a82146bafe7791c, type: 3}
   searchDistance: 10
   searchAngle: 75
   hoverHeight: 0.5
   hoverSpeed: 3
-  minHeight: 2
+  minHeight: 0.5
+  jumpscareSFX: {fileID: 0}
+  restartTimer: 0
   eyesight: 20
   currentStates: 1
 --- !u!82 &1317454928

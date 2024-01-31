@@ -32,6 +32,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1487183129}
+  - {fileID: 7318703281814440317}
   m_Father: {fileID: 983552337158910779}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -441,7 +442,7 @@ Transform:
   - {fileID: 983552336383430839}
   - {fileID: 2648837617353197042}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &983552337212266502
 CapsuleCollider:
