@@ -615,7 +615,7 @@ Transform:
   - {fileID: 983552336383430839}
   - {fileID: 2648837617353197042}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &983552337212266502
 CapsuleCollider:
@@ -652,12 +652,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad55021d87123542a1d3338adc57ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 4
+  MovementSpeed: 3
   SprintSpeedModifier: 1.8
   JumpHeight: 0
   AirControlMult: 0.2
   CoyoteTime: 0.1
   DrawGizmos: 0
+  sprintingcheck: 0
   grounded: 0
   groundCheckRad: 0.49
   groundCheckOffSet: {x: 0, y: -0.52, z: 0}
