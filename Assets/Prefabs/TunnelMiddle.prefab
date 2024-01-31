@@ -1456,7 +1456,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1ee4892f041044394a906c9d8ff266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Available: []
+  Available:
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 1, y: 0, z: 0}
+  - {x: -1, y: 0, z: 0}
   ConnectedTunnels: []
   ZPWall: {fileID: 8627965543703567567}
   ZNWall: {fileID: 4515902648586308362}
