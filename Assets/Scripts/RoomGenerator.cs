@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class RoomGenerator : MonoBehaviour
 {
@@ -19,14 +21,19 @@ public class RoomGenerator : MonoBehaviour
 
     }
     private List<_roomLoc> _rooms;
+    [SerializeField]
     private List<TunnelPieceController> _unProcessedRooms;
+    [SerializeField]
+    private List<TunnelPieceController> _generatedRooms;
 
     private void Awake()
     {
 
         _rooms = new List<_roomLoc>();
         _unProcessedRooms = new List<TunnelPieceController>();
+        _generatedRooms = new List<TunnelPieceController>();
         _unProcessedRooms.Add(_startPiece);
+        _generatedRooms.Add(_startPiece);
         _rooms.Add(new _roomLoc() { Location = new Vector2((int)_startPiece.transform.position.x, (int)_startPiece.transform.position.z), PieceController = _startPiece });
 
         int max = 50, x = 0;
@@ -62,6 +69,28 @@ public class RoomGenerator : MonoBehaviour
             }
 
         }
+
+        List<GameObject> floors = new List<GameObject>();
+
+        foreach(TunnelPieceController room in _generatedRooms)
+        {
+
+            floors.Add(room.gameObject.transform.GetChild(0).gameObject);
+
+        }
+
+        GameObject navmeshObj = new GameObject("NavMesh");
+
+        foreach(GameObject floor in floors)
+        {
+
+            floor.transform.parent = navmeshObj.transform;
+
+        }
+
+        NavMeshSurface navMesh = navmeshObj.AddComponent<NavMeshSurface>();
+        navMesh.ignoreNavMeshObstacle = true;
+        navMesh.BuildNavMesh();
 
     }
 
@@ -174,6 +203,7 @@ public class RoomGenerator : MonoBehaviour
 
         _rooms.Add(new _roomLoc() { Location = new Vector2((int)newRoom.transform.position.x, (int)newRoom.transform.position.z), PieceController = newRoom });
         _unProcessedRooms.Add(newRoom);
+        _generatedRooms.Add(newRoom);
 
     }
 
