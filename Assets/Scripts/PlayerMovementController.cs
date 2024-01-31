@@ -9,7 +9,7 @@ public class PlayerMovementController : MonoBehaviour
     public bool DrawGizmos;
     private float sprinting, coyoteTimer;
     [SerializeField]
-    private bool sprintingcheck, grounded;
+    private bool sprintingcheck, grounded, crouching;
     private Vector3 movementDir, spawnOrigin;
     private Rigidbody rb;
     private LayerMask playerMask;
@@ -18,7 +18,10 @@ public class PlayerMovementController : MonoBehaviour
     private float groundCheckRad;
     [SerializeField]
     private Vector3 groundCheckOffSet;
-
+    [SerializeField]
+    private float _crouchHeight = 0.8f;
+    [SerializeField]
+    private Transform _camPivot;
     void Start()
     {
 
@@ -81,7 +84,7 @@ public class PlayerMovementController : MonoBehaviour
 
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W) && crouching == false)
         {
 
             sprinting = SprintSpeedModifier;
@@ -97,6 +100,37 @@ public class PlayerMovementController : MonoBehaviour
             cc.Sprinting = false;
             if(SoundManager.instance)
                 SoundManager.instance.SetPitch(1f); // Play the sound 1.5 times faster
+
+        }
+
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+
+            if(crouching)
+            {
+
+                GetComponent<CapsuleCollider>().height = 1.8f;
+                transform.position += new Vector3(0, 0.51f, 0);
+                _camPivot.localPosition = new Vector3(0, 0.8f, 0);
+                crouching = false;
+
+            }
+            else
+            {
+
+                GetComponent<CapsuleCollider>().height = _crouchHeight;
+                transform.position -= new Vector3(0, 0.49f, 0);
+                _camPivot.localPosition = new Vector3(0, 0.35f, 0);
+                crouching = true;
+
+            }
+
+        }
+
+        if(crouching)
+        {
+
+            sprinting = 0.5f;
 
         }
 

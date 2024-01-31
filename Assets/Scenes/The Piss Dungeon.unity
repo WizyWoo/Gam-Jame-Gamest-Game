@@ -391,6 +391,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 657cb063d561a074b93ff1142e9f70f1, type: 3}
+--- !u!4 &285380767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 983552336383430839, guid: a7c35c78bf3bb164aa9419d7ad477fce, type: 3}
+  m_PrefabInstance: {fileID: 1389075428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &378549201
 Transform:
   m_ObjectHideFlags: 0
@@ -676,6 +681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 983552337212266503, guid: a7c35c78bf3bb164aa9419d7ad477fce, type: 3}
+      propertyPath: _camPivot
+      value: 
+      objectReference: {fileID: 285380767}
     - target: {fileID: 983552337212266555, guid: a7c35c78bf3bb164aa9419d7ad477fce, type: 3}
       propertyPath: m_RootOrder
       value: 0
