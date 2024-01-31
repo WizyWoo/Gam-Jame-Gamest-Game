@@ -469,7 +469,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5274689992865093806}
   - component: {fileID: 5973723807715831642}
-  - component: {fileID: 2719944944515048056}
   m_Layer: 6
   m_Name: ScetchyBathroom
   m_TagString: Untagged
@@ -553,27 +552,6 @@ MonoBehaviour:
   MaxCandles: 0
   MinCandles: 0
   Candle: {fileID: 6666388076854765629, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
---- !u!65 &2719944944515048056
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3004187589275864730}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.9, y: 3.9, z: 3.9}
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &3706226318494781947
 GameObject:
   m_ObjectHideFlags: 0

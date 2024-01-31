@@ -1612,7 +1612,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1951328903907259709}
   - component: {fileID: 54355394979562185}
-  - component: {fileID: 8617877935147208683}
   m_Layer: 6
   m_Name: TvRoom
   m_TagString: Untagged
@@ -1722,27 +1721,6 @@ MonoBehaviour:
   MaxCandles: 1
   MinCandles: 1
   Candle: {fileID: 6666388076854765629, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
---- !u!65 &8617877935147208683
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8905570727675880201}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.9, y: 3.9, z: 3.9}
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1001 &22988704124217298
 PrefabInstance:
   m_ObjectHideFlags: 0

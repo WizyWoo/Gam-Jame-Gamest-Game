@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
     public AudioSource[] audioSources;
     public AudioClip[] audioClips;
+    public AudioSource musicSource;
     public AudioMixerGroup audioMixerGroup;
 
     // Start is called before the first frame update

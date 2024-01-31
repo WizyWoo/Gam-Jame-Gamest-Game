@@ -160,7 +160,7 @@ Transform:
   m_Children:
   - {fileID: 3157392811498632494}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2988786598377444699
 MonoBehaviour:
@@ -178,6 +178,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 38218f638d9bbea4380561072cc357f9, type: 3}
   - {fileID: 8300000, guid: 1c1ad76795097014c884433a4c8f3b00, type: 3}
+  musicSource: {fileID: 7432305944342580325}
   audioMixerGroup: {fileID: 24300002, guid: a8cccb8339068fc4d83d22b2102a6b76, type: 2}
 --- !u!82 &2988786598377444700
 AudioSource:

@@ -154,7 +154,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8753728078689813292}
   - component: {fileID: 7110873697171371224}
-  - component: {fileID: 1582773723580283386}
   m_Layer: 6
   m_Name: SuperSketchyRoom
   m_TagString: Untagged
@@ -258,27 +257,6 @@ MonoBehaviour:
   MaxCandles: 0
   MinCandles: 0
   Candle: {fileID: 6666388076854765629, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
---- !u!65 &1582773723580283386
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871544054715487512}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.9, y: 3.9, z: 3.9}
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &2735080918568193816
 GameObject:
   m_ObjectHideFlags: 0
