@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Closet
   - Artifact
+  - StarterPoss
   layers:
   - Default
   - TransparentFX

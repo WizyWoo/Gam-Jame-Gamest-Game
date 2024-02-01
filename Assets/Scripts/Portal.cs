@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 
 
 public class Portal : MonoBehaviour
 {
-   public Transform[] portalWorlds;
-   public int numberOfPortalsHit, numberOfArtifacts;
+    public Transform[] portalWorldsPos;
+    private PortalManager portalManager;
     public ParticleSystem portalEffect;
     public GameObject[] artifact;
 
@@ -15,59 +16,62 @@ public class Portal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        portalManager = PortalManager.instance;
         player = GameObject.FindGameObjectWithTag("Player");
         GameObject[] artifacts = GameObject.FindGameObjectsWithTag("Artifact");
-        portalWorlds[1].position = GameObject.Find("ArtifactRoomSpawnPos1").transform.position;
+         portalWorldsPos[0] = GameObject.FindGameObjectWithTag("StarterPoss").transform;
+        portalWorldsPos[1] = GameObject.Find("ArtifactRoomSpawnPos1").transform;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-         
-            if(Vector3.Distance(player.transform.position, transform.position) < 1)
+       
+        if (Vector3.Distance(player.transform.position, transform.position) < 1)
+        {
+            if (portalManager.numberOfPortalsHit == 0)
             {
-                if(numberOfPortalsHit == 0)
-                {
-                    player.transform.position = portalWorlds[1].position;
-                    numberOfPortalsHit++;
-                }
-
-                else if(numberOfPortalsHit == 1 && numberOfArtifacts == 1)
-                {
-                    player.transform.position = portalWorlds[0].position;
-                    
-                }
-                else if(numberOfPortalsHit == 1)
-                {
-                    player.transform.position = portalWorlds[2].position;
-                    numberOfPortalsHit++;
-                    
-                }
-                else if(numberOfPortalsHit == 2 && numberOfArtifacts == 2)
-                {
-                    player.transform.position = portalWorlds[0].position;
-                   
-                }
-                else if(numberOfPortalsHit == 2)
-                {
-                    player.transform.position = portalWorlds[3].position;
-                    numberOfPortalsHit++;
-                }
-                else if(numberOfPortalsHit == 3 && numberOfArtifacts == 3)
-                {
-                    player.transform.position = portalWorlds[0].position;
-                }
-                else if(numberOfPortalsHit == 3)
-                {
-                    player.transform.position = portalWorlds[3].position;
-                    numberOfPortalsHit++;
-                }      
-                else if(numberOfPortalsHit == 4 && numberOfArtifacts == 4)
-                {
-                    player.transform.position = portalWorlds[0].position;
-                } 
+                player.transform.position = portalWorldsPos[1].position;
+                portalManager.numberOfPortalsHit++;
             }
-        
+
+            else if (portalManager.numberOfPortalsHit == 1 && portalManager.numberOfArtifacts == 1)
+            {
+                player.transform.position = portalWorldsPos[0].position;
+
+            }
+            else if (portalManager.numberOfPortalsHit == 1)
+            {
+                player.transform.position = portalWorldsPos[2].position;
+                portalManager.numberOfPortalsHit++;
+
+            }
+            else if (portalManager.numberOfPortalsHit == 2 && portalManager.numberOfArtifacts == 2)
+            {
+                player.transform.position = portalWorldsPos[0].position;
+
+            }
+            else if (portalManager.numberOfPortalsHit == 2)
+            {
+                player.transform.position = portalWorldsPos[3].position;
+                portalManager.numberOfPortalsHit++;
+            }
+            else if (portalManager.numberOfPortalsHit == 3 && portalManager.numberOfArtifacts == 3)
+            {
+                player.transform.position = portalWorldsPos[0].position;
+            }
+            else if (portalManager.numberOfPortalsHit == 3)
+            {
+                player.transform.position = portalWorldsPos[3].position;
+                portalManager.numberOfPortalsHit++;
+            }
+            else if (portalManager.numberOfPortalsHit == 4 && portalManager.numberOfArtifacts == 4)
+            {
+                player.transform.position = portalWorldsPos[0].position;
+            }
+        }
+
     }
 
 
