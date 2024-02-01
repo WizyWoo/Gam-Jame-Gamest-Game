@@ -1002,7 +1002,7 @@ Transform:
   - {fileID: 5840182876009534939}
   - {fileID: 7914152453335789179}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1938442084247325871
 GameObject:
@@ -1661,6 +1661,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1938442085347120921}
+  - component: {fileID: 43103487731185043}
   m_Layer: 0
   m_Name: FlyingTHingy
   m_TagString: Untagged
@@ -1689,6 +1690,120 @@ Transform:
   m_Father: {fileID: 1938442085635863274}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!82 &43103487731185043
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938442085347120918}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8cccb8339068fc4d83d22b2102a6b76, type: 2}
+  m_audioClip: {fileID: 8300000, guid: d045c29a065191b4992602a5db6d3b5f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 0.5
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 200
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.005
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.6058457
+      value: 0.43674922
+      inSlope: -3.0143507
+      outSlope: -3.0143507
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.05589807
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8434626
+      value: 0.037397902
+      inSlope: -0.26621988
+      outSlope: -0.26621988
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.18582907
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.030013304
+      outSlope: -0.030013304
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.19366206
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1938442085351441231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,6 +1993,7 @@ MonoBehaviour:
   SlowMod: 2
   _speedMod: 0
   _timer: 0
+  _audio: {fileID: 43103487731185043}
 --- !u!1 &1938442085666766088
 GameObject:
   m_ObjectHideFlags: 0
@@ -9180,6 +9296,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1938442084227831868}
     m_Modifications:
+    - target: {fileID: 3357186215832981779, guid: e9eb76e8643160744b03d8429426ad54, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8cccb8339068fc4d83d22b2102a6b76, type: 2}
     - target: {fileID: 4179509815456589876, guid: e9eb76e8643160744b03d8429426ad54, type: 3}
       propertyPath: m_Name
       value: Artifact

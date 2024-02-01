@@ -20,13 +20,8 @@ public class FlyingTrenchThing : MonoBehaviour
 
             _timer = Mathf.Clamp(_timer += Time.deltaTime * 0.4f, 0f, 1f);
 
-            if(!_lock)
-            {
-
-                _audio.Play();
-                _lock = true;
-
-            }
+            if(_lock)
+                _lock = false;
 
         }
         else if(transform.rotation.eulerAngles.z < 180)
@@ -34,8 +29,13 @@ public class FlyingTrenchThing : MonoBehaviour
 
             _timer = Mathf.Clamp(_timer -= Time.deltaTime * 0.4f, 0f, 1f);
 
-            if(_lock)
-                _lock = false;
+            if(!_lock)
+            {
+
+                _audio.Play();
+                _lock = true;
+
+            }
 
         }
 
