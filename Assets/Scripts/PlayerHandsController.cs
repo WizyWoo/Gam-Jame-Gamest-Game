@@ -86,6 +86,7 @@ public class PlayerHandsController : MonoBehaviour
                     Candle.parent = CandleHolder;
                     Candle.localPosition = Vector3.zero;
                     Candle.localRotation = Quaternion.identity;
+                    Candle.GetComponent<CandleController>().PickedUp();
 
                 }
 
