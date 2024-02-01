@@ -20,7 +20,7 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField]
     private List<TunnelPieceController> _unProcessedRooms;
     [SerializeField]
-    private List<TunnelPieceController> _generatedRooms;
+    public List<TunnelPieceController> _generatedRooms;
     private List<TunnelPieceController> _portalRooms;
 
     private void Awake()

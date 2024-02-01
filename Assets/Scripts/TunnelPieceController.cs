@@ -40,25 +40,29 @@ public class TunnelPieceController : MonoBehaviour
         if (direction == Vector3.forward)
         {
 
-            Destroy(ZPWall);
+            if(ZPWall)
+                Destroy(ZPWall);
 
         }
         else if (direction == Vector3.back)
         {
 
-            Destroy(ZNWall);
+            if(ZNWall)
+                Destroy(ZNWall);
 
         }
         else if (direction == Vector3.right)
         {
 
-            Destroy(XPWall);
+            if(XPWall)
+                Destroy(XPWall);
 
         }
         else if (direction == Vector3.left)
         {
 
-            Destroy(XNWall);
+            if(XNWall)
+                Destroy(XNWall);
 
         }
         
