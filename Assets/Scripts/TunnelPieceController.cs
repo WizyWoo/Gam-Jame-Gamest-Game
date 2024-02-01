@@ -12,6 +12,7 @@ public class TunnelPieceController : MonoBehaviour
     public List<Transform> CandleSpawnPoints;
     public int MaxCandles, MinCandles;
     public GameObject Candle;
+    public Transform PortalPos;
 
     private void Start()
     {
