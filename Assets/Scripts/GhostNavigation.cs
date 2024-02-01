@@ -15,7 +15,7 @@ public class GhostNavigation : MonoBehaviour
     private NavMeshAgent agent;
     public Sprite jumpscare;
     private GameObject player;
-    public float searchDistance = 10f; // The distance the ray is cast
+    public float searchDistance; // The distance the ray is cast
     public float searchAngle = 75f; // The angle of the search
 
     private PlayerHandsController playerhand;

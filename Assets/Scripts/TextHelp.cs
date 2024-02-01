@@ -32,47 +32,47 @@ public class TextHelp : MonoBehaviour
         if (textTimer > 0 && !message1Displayed)
         
         {
-            DisplayText("Press E to pick up the candle, and F to blow it out", 4);
+            DisplayText("Press E to pick up candles, and F to blow it out", 6);
             message1Displayed = true;
         }
 
         if (textTimer > 10 && !message2Displayed)
         
         {
-            DisplayText("Find the portals and enter them to find the artifacts", 4);
+            DisplayText("Find the portals and enter them to find the artifacts", 6);
             message2Displayed = true;
         }
 
         if (textTimer > 20 && !message3Displayed)
         
         {
-            DisplayText("The Artifacts will close the portals", 4);
+            DisplayText("The Artifacts will close the portals", 6);
             message3Displayed = true;
         }
 
         if (textTimer > 30 && !message4Displayed)
         
         {
-            DisplayText("Destroy all the portals", 4);
+            DisplayText("Destroy all the portals", 6);
             message4Displayed = true;
         }
 
         if (textTimer > 40 && !message5Displayed)
         
         {
-            DisplayText("Stay away from the ghosts...", 4);
+            DisplayText("Stay away from the ghosts...", 6);
             message5Displayed = true;
         }
 
         if (textTimer > 50 && !message6Displayed)
         {
-            DisplayText("And dont let the candles burn out..", 4);
+            DisplayText("And dont let the candles burn out..", 6);
             message6Displayed = true;
         }
 
         if (textTimer > 60 && !message7Displayed)
         {
-            DisplayText("Good luck", 4);
+            DisplayText("Good luck", 6);
             message7Displayed = true;
         }
 
