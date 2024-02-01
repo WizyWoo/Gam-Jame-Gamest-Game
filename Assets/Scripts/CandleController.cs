@@ -91,6 +91,7 @@ public class CandleController : MonoBehaviour
     {
 
         Destroy(_candleGlowFX, 1f);
+        gameObject.GetComponent<BoxCollider>().isTrigger = true;
 
     }
 
