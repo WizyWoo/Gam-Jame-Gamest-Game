@@ -43,7 +43,7 @@ public class PlayerHandsController : MonoBehaviour
             if (Candle)
             {
 
-                if (Physics.Raycast(transform.position, transform.forward, out hit, _placeDistance, LayerMask.GetMask("Surface")))
+                if (Physics.Raycast(transform.position, transform.forward, out hit, _placeDistance, LayerMask.GetMask("Surface") + LayerMask.GetMask("Candle")))
                 {
 
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Surface"))
@@ -67,6 +67,19 @@ public class PlayerHandsController : MonoBehaviour
                             Debug.Log("hit" + colliders[0].name);
 
                         }
+
+                    }
+                    else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Candle"))
+                    {
+
+                        Candle.parent = null;
+                        Candle.position = hit.collider.transform.position;
+                        Candle.rotation = transform.root.rotation;
+                        Candle = hit.collider.transform;
+                        Candle.parent = CandleHolder;
+                        Candle.localPosition = Vector3.zero;
+                        Candle.localRotation = Quaternion.identity;
+                        Candle.GetComponent<CandleController>().PickedUp();
 
                     }
 
