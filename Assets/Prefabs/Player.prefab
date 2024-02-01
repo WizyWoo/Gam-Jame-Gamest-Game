@@ -798,7 +798,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.15
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -817,14 +817,14 @@ MonoBehaviour:
   MovementSpeed: 3
   SprintSpeedModifier: 1.8
   JumpHeight: 0
-  AirControlMult: 0.2
+  AirControlMult: 0
   CoyoteTime: 0.1
-  DrawGizmos: 0
+  DrawGizmos: 1
   sprintingcheck: 0
   grounded: 0
   crouching: 0
-  groundCheckRad: 0.49
-  groundCheckOffSet: {x: 0, y: -0.52, z: 0}
+  groundCheckRad: 0.1
+  groundCheckOffSet: {x: 0, y: -0.82, z: 0}
   _crouchHeight: 0.8
   _camPivot: {fileID: 983552336383430839}
 --- !u!54 &983552337212266496

@@ -23,7 +23,7 @@ public class Portal : MonoBehaviour
     void Update()
     {
          
-            if(Vector3.Distance(player.transform.position, transform.position) < 2)
+            if(Vector3.Distance(player.transform.position, transform.position) < 1)
             {
                 if(numberOfPortalsHit == 0)
                 {
