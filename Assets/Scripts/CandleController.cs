@@ -12,7 +12,7 @@ public class CandleController : MonoBehaviour
     [SerializeField]
     private Transform CandleVFX, _candleFX, _candleWick;
     [SerializeField]
-    private GameObject _candleGlowFX;
+    private ParticleSystem _candleGlowFX;
     private float _candleLifeTimer, _maxIntensity, _currentIntensity, _lerpIntensity, _lerpTimer;
     private Vector3 _candleVFXStartScale, _candleWickStartPos;
 
