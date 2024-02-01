@@ -9945,6 +9945,7 @@ MonoBehaviour:
   CandleVFX: {fileID: 2346994198983047891}
   _candleFX: {fileID: 85763049030808710}
   _candleWick: {fileID: 1532680642205174036}
+  _candleGlowFX: {fileID: 5814260451588863590}
 --- !u!1 &7780640487210263667
 GameObject:
   m_ObjectHideFlags: 0
