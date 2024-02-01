@@ -12,6 +12,8 @@ public class RoomGenerator : MonoBehaviour
     public List<GameObject> RoomPieces;
     public List<int> MaxSpawnsAllowed;
     [SerializeField]
+    private GameObject _ghost, _portal;
+    [SerializeField]
     private TunnelPieceController _startPiece;
     [SerializeField]
     private List<Vector2> _rooms;
@@ -30,19 +32,9 @@ public class RoomGenerator : MonoBehaviour
         _generatedRooms.Add(_startPiece);
         _rooms.Add(new Vector2((int)_startPiece.transform.position.x, (int)_startPiece.transform.position.z));
 
-        int max = 50, x = 0;
         bool allRoomsProcessed = false;
         while(!allRoomsProcessed)
         {
-
-            if(x > max)
-            {
-
-                Debug.LogError("Max rooms reached");
-                break;
-
-            }
-            x++;
 
             if(RoomPieces.Count == 0)
             {
@@ -87,6 +79,22 @@ public class RoomGenerator : MonoBehaviour
         navMesh.BuildNavMesh();
         navmeshObj.transform.position = Vector3.zero;
 
+        while(true)
+        {
+
+            int x = Random.Range(0, _generatedRooms.Count);
+
+            if(_generatedRooms[x].ConnectedRooms.Count == 0)
+            {
+
+                Instantiate(_portal, _generatedRooms[x].PortalPos.position, Quaternion.identity);
+                break;
+
+            }
+
+        }
+
+        Instantiate(_ghost, _generatedRooms[_generatedRooms.Count - 1].transform.position + Vector3.up * 2, Quaternion.identity);
 
     }
 
