@@ -1575,8 +1575,11 @@ MonoBehaviour:
   - {fileID: 3004187589275864730, guid: 9121985e991abc547b69c2bce7c86563, type: 3}
   - {fileID: 1871544054715487512, guid: 31d672af302a69a4aacbd7efee2bd1ee, type: 3}
   - {fileID: 8905570727675880201, guid: 9a48399591b45694fb73a0066176cc22, type: 3}
+  - {fileID: 4831726677157070167, guid: 0e1fadbd89e2f03459d884eac8a8842f, type: 3}
+  - {fileID: 6383166296289094591, guid: 5cbb8d6523700094492a2a432032e831, type: 3}
   MaxSpawnsAllowed: 02000000020000000400000003000000
   _startPiece: {fileID: 8000768275928061064}
+  _rooms: []
   _unProcessedRooms: []
   _generatedRooms: []
 --- !u!1 &8806576505100739105
