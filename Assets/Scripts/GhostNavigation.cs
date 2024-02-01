@@ -139,7 +139,7 @@ public class GhostNavigation : MonoBehaviour
 
 
         // agent speed should accelerate when chasing the player
-        agent.acceleration = 20;
+       // agent.acceleration = 20;
 
 
         if (!played)
@@ -199,9 +199,10 @@ public class GhostNavigation : MonoBehaviour
 
     public void SearchPlayer()
     {
+        
        // StartCoroutine(ChangeMaterialOverTime(initialMaterial, 1f)); // Change material back over 1 second
         //slowly change to material0 from material1
-        agent.acceleration = 10;
+       // agent.acceleration = 10;
         played = false;
         //move to a random spot on the ground
         if (agent.remainingDistance <= 1)
@@ -237,6 +238,7 @@ public class GhostNavigation : MonoBehaviour
         float angle = Vector3.Angle(direction, transform.forward);
         if (Physics.Raycast(transform.position, direction, out hitInfo, searchDistance))
         {
+            Debug.Log(hitInfo.collider.gameObject.name);
             if (hitInfo.collider.gameObject.tag == "Player" && angle < searchAngle)
             {
                 currentStates = states.ChasingPlayer;
@@ -290,13 +292,13 @@ public class GhostNavigation : MonoBehaviour
 
         if (playerhand.Candle != null && playerhand.Candle.GetComponent<CandleController>().IsLitFam == true)
         {
-            searchDistance = 20;
-            agent.speed = 3.5f;
+            searchDistance = 10;
+            agent.speed = 2.5f;
         }
         else
         {
-            searchDistance = 10;
-            agent.speed = 5f;
+            searchDistance = 20;
+            agent.speed = 4f;
 
         }
     }

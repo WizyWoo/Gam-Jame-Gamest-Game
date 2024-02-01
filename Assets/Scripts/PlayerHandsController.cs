@@ -17,16 +17,16 @@ public class PlayerHandsController : MonoBehaviour
     private int _blows;
     private float _blowTimer;
 
-    
+
 
     private void Update()
     {
 
-        if(_blowTimer > 0)
+        if (_blowTimer > 0)
         {
 
             _blowTimer -= Time.deltaTime;
-            if(_blowTimer <= 0)
+            if (_blowTimer <= 0)
             {
 
                 _blowTimer = 0;
@@ -36,22 +36,22 @@ public class PlayerHandsController : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0))
         {
 
             RaycastHit hit;
-            if(Candle)
+            if (Candle)
             {
 
-                if(Physics.Raycast(transform.position, transform.forward, out hit, _placeDistance, LayerMask.GetMask("Surface")))
+                if (Physics.Raycast(transform.position, transform.forward, out hit, _placeDistance, LayerMask.GetMask("Surface")))
                 {
 
-                    if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Surface"))
+                    if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Surface"))
                     {
 
                         Collider[] colliders = Physics.OverlapBox(hit.point + _placeCheckOffset, _safetyBox, transform.root.rotation);
 
-                        if(colliders.Length == 0)
+                        if (colliders.Length == 0)
                         {
 
                             Candle.parent = null;
@@ -76,10 +76,10 @@ public class PlayerHandsController : MonoBehaviour
 
             }
 
-            if(Physics.Raycast(transform.position, transform.forward, out hit, _placeDistance, LayerMask.GetMask("Candle")))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, _placeDistance, LayerMask.GetMask("Candle")))
             {
 
-                if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Candle"))
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Candle"))
                 {
 
                     Candle = hit.collider.transform;
@@ -94,12 +94,12 @@ public class PlayerHandsController : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.B))
         {
 
             _blowEffect.Play();
 
-            if(Candle)
+            if (Candle)
             {
 
                 Candle.GetComponent<CandleController>().GetQuenchedFam();
@@ -109,7 +109,7 @@ public class PlayerHandsController : MonoBehaviour
             _blowTimer = 0.5f;
             _blows++;
 
-            if(_blows >= 5)
+            if (_blows >= 5)
             {
 
                 _blows = 0;
@@ -120,15 +120,19 @@ public class PlayerHandsController : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Mouse1))
         {
 
-            if(Candle)
+            if (Candle)
             {
 
-                if(!Candle.GetComponent<CandleController>().IsLitFam)
+                if (!Candle.GetComponent<CandleController>().IsLitFam)
+                {
                     Candle.GetComponent<CandleController>().GetLitFam();
-                else if(Candle.GetComponent<CandleController>().IsLitFam)
+                    SoundManager.instance.PlaySound(2);
+
+                }
+                else if (Candle.GetComponent<CandleController>().IsLitFam)
                 {
 
                     _blowEffect.Play();
@@ -138,7 +142,7 @@ public class PlayerHandsController : MonoBehaviour
                     _blowTimer = 0.5f;
                     _blows++;
 
-                    if(_blows >= 5)
+                    if (_blows >= 5)
                     {
 
                         _blows = 0;

@@ -103,7 +103,7 @@ public class PlayerMovementController : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(KeyCode.C))
+        if(Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.LeftControl))
         {
 
             if(crouching)

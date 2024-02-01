@@ -70,6 +70,7 @@ public class Portal : MonoBehaviour
             {
                 player.transform.position = portalWorldsPos[0].position;
             }
+            Destroy(gameObject);
         }
 
     }
