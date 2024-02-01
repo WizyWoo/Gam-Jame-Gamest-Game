@@ -5145,7 +5145,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -9945,7 +9945,7 @@ MonoBehaviour:
   CandleVFX: {fileID: 2346994198983047891}
   _candleFX: {fileID: 85763049030808710}
   _candleWick: {fileID: 1532680642205174036}
-  _candleGlowFX: {fileID: 5814260451588863590}
+  _candleGlowFX: {fileID: 355916122289268143}
 --- !u!1 &7780640487210263667
 GameObject:
   m_ObjectHideFlags: 0

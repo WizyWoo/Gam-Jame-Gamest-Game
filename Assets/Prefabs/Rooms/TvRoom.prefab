@@ -1541,7 +1541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7645791945131517163}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PortalPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

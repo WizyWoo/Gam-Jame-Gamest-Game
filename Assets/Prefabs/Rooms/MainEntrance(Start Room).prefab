@@ -199,7 +199,7 @@ Transform:
   - {fileID: 274076485258334705}
   - {fileID: 4613040689193871341}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8000768275928061064
 MonoBehaviour:
@@ -1705,6 +1705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1771,6 +1775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crutches (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1359669688954358, guid: 2e679ac81ad6ebb499ab066d0d4ddb05, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4818302672216962, guid: 2e679ac81ad6ebb499ab066d0d4ddb05, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1833,9 +1841,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8421142954350093180}
     m_Modifications:
+    - target: {fileID: 1506257415928771475, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799833561345046426, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414859947055762240, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284530635090427436, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814260451588863590, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6666388076854765629, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
       propertyPath: m_Name
       value: Pog Candle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6666388076854765629, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780640487210263667, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8010339438589605902, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
       propertyPath: m_RootOrder
@@ -1885,6 +1921,10 @@ PrefabInstance:
       propertyPath: IsLitFam
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8812973825210585559, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1906,6 +1946,10 @@ PrefabInstance:
     - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_Name
       value: Bench (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
@@ -1973,6 +2017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2038,6 +2086,10 @@ PrefabInstance:
     - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_Name
       value: Pipe (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4796547210145694, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_RootOrder
@@ -2105,6 +2157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2170,6 +2226,10 @@ PrefabInstance:
     - target: {fileID: 1550487739604554, guid: 68a49296450cc5745a78c3895333111e, type: 3}
       propertyPath: m_Name
       value: Lamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1550487739604554, guid: 68a49296450cc5745a78c3895333111e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4005733655707148, guid: 68a49296450cc5745a78c3895333111e, type: 3}
       propertyPath: m_RootOrder
@@ -2237,6 +2297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanOld (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1743537859050268, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4762396254282262, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2302,6 +2366,10 @@ PrefabInstance:
     - target: {fileID: 1743537859050268, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
       propertyPath: m_Name
       value: CanOld
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743537859050268, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4762396254282262, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
       propertyPath: m_RootOrder
@@ -2369,6 +2437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2434,6 +2506,10 @@ PrefabInstance:
     - target: {fileID: 1548659896368684, guid: a87dd23a0510278409781030772717e1, type: 3}
       propertyPath: m_Name
       value: CanOld_Damaged (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548659896368684, guid: a87dd23a0510278409781030772717e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4037751736507588, guid: a87dd23a0510278409781030772717e1, type: 3}
       propertyPath: m_RootOrder
@@ -2501,6 +2577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench
       objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2566,6 +2646,10 @@ PrefabInstance:
     - target: {fileID: 1605126930946088, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
       propertyPath: m_Name
       value: BigShelf_Stock (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605126930946088, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4105631882345270, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
       propertyPath: m_RootOrder
@@ -2637,6 +2721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chandelier
       objectReference: {fileID: 0}
+    - target: {fileID: 1877608342894014, guid: fc9c58f21e7a1f24197eae26baeee04b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4360043509953530, guid: fc9c58f21e7a1f24197eae26baeee04b, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2702,6 +2790,10 @@ PrefabInstance:
     - target: {fileID: 1743537859050268, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
       propertyPath: m_Name
       value: CanOld (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743537859050268, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4762396254282262, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
       propertyPath: m_RootOrder
@@ -2769,6 +2861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PC_Monitor
       objectReference: {fileID: 0}
+    - target: {fileID: 1240376027092810, guid: 2f603782a54272140bd490519349fd88, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4281571602589966, guid: 2f603782a54272140bd490519349fd88, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2834,6 +2930,10 @@ PrefabInstance:
     - target: {fileID: 1417447832766372, guid: 34d35c80e2a93d241867be5cee4ac2e7, type: 3}
       propertyPath: m_Name
       value: ChairSchool
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417447832766372, guid: 34d35c80e2a93d241867be5cee4ac2e7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4897939641224740, guid: 34d35c80e2a93d241867be5cee4ac2e7, type: 3}
       propertyPath: m_RootOrder
@@ -2901,6 +3001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2966,6 +3070,10 @@ PrefabInstance:
     - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_Name
       value: Paper (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_RootOrder
@@ -3033,6 +3141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heater
       objectReference: {fileID: 0}
+    - target: {fileID: 1270857098791048, guid: 35e841b08485a4c4ca32bd075e78e006, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4525979494391414, guid: 35e841b08485a4c4ca32bd075e78e006, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3098,6 +3210,10 @@ PrefabInstance:
     - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_Name
       value: Bench (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
@@ -3165,6 +3281,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3230,6 +3350,10 @@ PrefabInstance:
     - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_Name
       value: Paper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_RootOrder
@@ -3297,6 +3421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3363,6 +3491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheelChair (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1256123131733362, guid: f87ea19ec8f4e174eb4c5dd88e9e2ab7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4599819051712632, guid: f87ea19ec8f4e174eb4c5dd88e9e2ab7, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3425,9 +3557,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8421142954350093180}
     m_Modifications:
+    - target: {fileID: 1167767489565788, guid: 6a166fb671afe1046976d33f2e64e26e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198543809038976, guid: 6a166fb671afe1046976d33f2e64e26e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241819402714334, guid: 6a166fb671afe1046976d33f2e64e26e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830909188252370, guid: 6a166fb671afe1046976d33f2e64e26e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956668393684580, guid: 6a166fb671afe1046976d33f2e64e26e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1985106575824606, guid: 6a166fb671afe1046976d33f2e64e26e, type: 3}
       propertyPath: m_Name
       value: Cupboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985106575824606, guid: 6a166fb671afe1046976d33f2e64e26e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4641670206453542, guid: 6a166fb671afe1046976d33f2e64e26e, type: 3}
       propertyPath: m_RootOrder
@@ -3563,6 +3719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3628,6 +3788,10 @@ PrefabInstance:
     - target: {fileID: 1782625778920384, guid: 285481860f04d3648a939f684d9f5ff5, type: 3}
       propertyPath: m_Name
       value: CupboardLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782625778920384, guid: 285481860f04d3648a939f684d9f5ff5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4331104951942214, guid: 285481860f04d3648a939f684d9f5ff5, type: 3}
       propertyPath: m_RootOrder
@@ -3695,6 +3859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheelChair
       objectReference: {fileID: 0}
+    - target: {fileID: 1256123131733362, guid: f87ea19ec8f4e174eb4c5dd88e9e2ab7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4599819051712632, guid: f87ea19ec8f4e174eb4c5dd88e9e2ab7, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3760,6 +3928,10 @@ PrefabInstance:
     - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_Name
       value: Bench (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
@@ -3827,6 +3999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CupboardLight_Broken
       objectReference: {fileID: 0}
+    - target: {fileID: 1175278575419508, guid: 801ce3aca23566847b0f6bb6119013ec, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4048962136879494, guid: 801ce3aca23566847b0f6bb6119013ec, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3892,6 +4068,10 @@ PrefabInstance:
     - target: {fileID: 1605126930946088, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
       propertyPath: m_Name
       value: BigShelf_Stock (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605126930946088, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4105631882345270, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
       propertyPath: m_RootOrder
@@ -3963,6 +4143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4028,6 +4212,10 @@ PrefabInstance:
     - target: {fileID: 1897668207945844, guid: 0a304947e269c4d4baf50f19725555aa, type: 3}
       propertyPath: m_Name
       value: TableOffice
+      objectReference: {fileID: 0}
+    - target: {fileID: 1897668207945844, guid: 0a304947e269c4d4baf50f19725555aa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4013151085889374, guid: 0a304947e269c4d4baf50f19725555aa, type: 3}
       propertyPath: m_RootOrder
@@ -4095,6 +4283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4160,6 +4352,10 @@ PrefabInstance:
     - target: {fileID: 1099436544919354, guid: 853ccd37519f26949b14b1767fb5c319, type: 3}
       propertyPath: m_Name
       value: Table_Bed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099436544919354, guid: 853ccd37519f26949b14b1767fb5c319, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4781314695899104, guid: 853ccd37519f26949b14b1767fb5c319, type: 3}
       propertyPath: m_RootOrder
@@ -4227,6 +4423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillow
       objectReference: {fileID: 0}
+    - target: {fileID: 1284733586385132, guid: ad2e00a29b893684badcf4a95835b385, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4182960130155038, guid: ad2e00a29b893684badcf4a95835b385, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4292,6 +4492,10 @@ PrefabInstance:
     - target: {fileID: 1548659896368684, guid: a87dd23a0510278409781030772717e1, type: 3}
       propertyPath: m_Name
       value: CanOld_Damaged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548659896368684, guid: a87dd23a0510278409781030772717e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4037751736507588, guid: a87dd23a0510278409781030772717e1, type: 3}
       propertyPath: m_RootOrder
@@ -4359,6 +4563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheelChair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1256123131733362, guid: f87ea19ec8f4e174eb4c5dd88e9e2ab7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4599819051712632, guid: f87ea19ec8f4e174eb4c5dd88e9e2ab7, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4424,6 +4632,10 @@ PrefabInstance:
     - target: {fileID: 1278913846851208, guid: 53284bd63043e7049ac08b0e9186f1ca, type: 3}
       propertyPath: m_Name
       value: ChairOffice
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278913846851208, guid: 53284bd63043e7049ac08b0e9186f1ca, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4711020134367096, guid: 53284bd63043e7049ac08b0e9186f1ca, type: 3}
       propertyPath: m_RootOrder
@@ -4491,6 +4703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheelChair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1256123131733362, guid: f87ea19ec8f4e174eb4c5dd88e9e2ab7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4599819051712632, guid: f87ea19ec8f4e174eb4c5dd88e9e2ab7, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4557,6 +4773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanOld (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1743537859050268, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4762396254282262, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4622,6 +4842,10 @@ PrefabInstance:
     - target: {fileID: 1605126930946088, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
       propertyPath: m_Name
       value: BigShelf_Stock (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605126930946088, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4105631882345270, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
       propertyPath: m_RootOrder
@@ -4693,6 +4917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4758,6 +4986,10 @@ PrefabInstance:
     - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_Name
       value: Paper (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_RootOrder
@@ -4825,6 +5057,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank_V2
       objectReference: {fileID: 0}
+    - target: {fileID: 1039335525940132, guid: afb2c49747667614293fe2384cf95956, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4609995730315160, guid: afb2c49747667614293fe2384cf95956, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4890,6 +5126,10 @@ PrefabInstance:
     - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_Name
       value: Pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354093726668000, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4796547210145694, guid: 38b52f42d6dafda489a10a25af194f61, type: 3}
       propertyPath: m_RootOrder
@@ -4957,6 +5197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5023,6 +5267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crutches
       objectReference: {fileID: 0}
+    - target: {fileID: 1359669688954358, guid: 2e679ac81ad6ebb499ab066d0d4ddb05, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4818302672216962, guid: 2e679ac81ad6ebb499ab066d0d4ddb05, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5088,6 +5336,10 @@ PrefabInstance:
     - target: {fileID: 1605126930946088, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
       propertyPath: m_Name
       value: BigShelf_Stock
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605126930946088, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4105631882345270, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
       propertyPath: m_RootOrder
@@ -5159,6 +5411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mug
       objectReference: {fileID: 0}
+    - target: {fileID: 1508735698817094, guid: e654e87e122044a489128addf80b0613, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4380618352805604, guid: e654e87e122044a489128addf80b0613, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5224,6 +5480,10 @@ PrefabInstance:
     - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_Name
       value: Bench (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724492737742528, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4202371768458358, guid: b1057c1396491c24b8af552a78f20b1f, type: 3}
       propertyPath: m_RootOrder
@@ -5291,6 +5551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanOld (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1743537859050268, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4762396254282262, guid: 3cbb80945b533fc48b6379a688829730, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5356,6 +5620,10 @@ PrefabInstance:
     - target: {fileID: 1246180960294942, guid: 0f96da9664a6d9342bc8d0a3254c96bf, type: 3}
       propertyPath: m_Name
       value: TableWhiteKitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246180960294942, guid: 0f96da9664a6d9342bc8d0a3254c96bf, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4057839852189204, guid: 0f96da9664a6d9342bc8d0a3254c96bf, type: 3}
       propertyPath: m_RootOrder

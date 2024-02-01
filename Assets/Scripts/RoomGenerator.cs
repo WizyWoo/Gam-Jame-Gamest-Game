@@ -83,12 +83,39 @@ public class RoomGenerator : MonoBehaviour
         _portalRooms = _generatedRooms;
 
         int portalsSpawned = 0;
-        while(true)
+        bool allPortalsSpawned = false;
+
+        for(int i = 0; i < _portalRooms.Count; i++)
+        {
+
+            if(_portalRooms[i].ConnectedRooms.Count == 0 && _portalRooms[i].PortalPos != null)
+            {
+
+                Instantiate(_portal, _portalRooms[i].PortalPos.position, Quaternion.identity);
+                _portalRooms.RemoveAt(i);
+                portalsSpawned++;
+
+            }
+
+            if(portalsSpawned == 4)
+            {
+
+                allPortalsSpawned = true;
+                break;
+
+            }
+
+        }
+
+        while(!allPortalsSpawned)
         {
 
             int x = Random.Range(0, _portalRooms.Count);
 
-            if(_portalRooms[x].ConnectedRooms.Count == 0 && _portalRooms[x].PortalPos != null)
+            if(portalsSpawned == 4)
+                break;
+
+            if(Vector3.Distance(_portalRooms[x].transform.position, Vector3.zero) > 15 && _portalRooms[x].PortalPos != null)
             {
 
                 Instantiate(_portal, _portalRooms[x].PortalPos.position, Quaternion.identity);
