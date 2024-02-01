@@ -125,6 +125,8 @@ public class RoomGenerator : MonoBehaviour
             Vector3 testDir = room.Available[y];
             ModAvailableDir(ref testDir, room);
 
+            Debug.Log("On Check Dir " + testDir);
+
             if(CheckLoc(room.transform.position + (testDir * 15)))
             {
 
@@ -143,12 +145,14 @@ public class RoomGenerator : MonoBehaviour
     private bool CheckLoc(Vector3 location)
     {
 
+        Debug.Log("inside the Check Dir " + location);
         foreach(Vector2 room in _rooms)
         {
-
-            if(room == new Vector2((int)location.x, (int)location.z))
+            
+            if(Mathf.RoundToInt(room.x) == Mathf.RoundToInt(location.x) && Mathf.RoundToInt(room.y) == Mathf.RoundToInt(location.z))
             {
 
+                Debug.LogError("Room already exists at " + location);
                 return true;
 
             }
@@ -193,11 +197,12 @@ public class RoomGenerator : MonoBehaviour
         TunnelPieceController newRoom = Instantiate(selectedRoomType, currentRoom.transform.position + (availableDir * 15), Quaternion.identity).GetComponent<TunnelPieceController>();
         newRoom.transform.LookAt(currentRoom.transform.position);
 
+        Debug.Log("Rooms Spawn loc " + newRoom.transform.position);
         newRoom.RemoveWall(new Vector3(0,0,1));
 
         currentRoom.ConnectedRooms.Add(newRoom);
 
-        _rooms.Add(new Vector2((int)newRoom.transform.position.x, (int)newRoom.transform.position.z));
+        _rooms.Add(new Vector2(Mathf.RoundToInt(newRoom.transform.position.x), Mathf.RoundToInt(newRoom.transform.position.z)));
         _unProcessedRooms.Add(newRoom);
         _generatedRooms.Add(newRoom);
 
