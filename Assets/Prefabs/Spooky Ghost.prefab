@@ -4982,9 +4982,9 @@ MonoBehaviour:
   jumpscare: {fileID: 21300000, guid: 4e8225e8aff0c1e42a82146bafe7791c, type: 3}
   searchDistance: 5
   searchAngle: 75
-  hoverHeight: 0.5
-  hoverSpeed: 3
-  minHeight: 0.5
+  hoverHeight: 0.25
+  hoverSpeed: 2
+  minHeight: 1.5
   jumpscareSFX: {fileID: 3173911378209579308}
   restartTimer: 0
   eyesight: 5

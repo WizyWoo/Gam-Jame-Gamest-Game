@@ -132,7 +132,7 @@ public class GhostNavigation : MonoBehaviour
     public void ChasePlayer()
     {
         agent.SetDestination(player.transform.position);
-        StartCoroutine(ChangeMaterialOverTime(chaseMaterial, 1f)); // Change material over 1 second
+       // StartCoroutine(ChangeMaterialOverTime(chaseMaterial, 1f)); // Change material over 1 second
 
 
 
@@ -199,7 +199,7 @@ public class GhostNavigation : MonoBehaviour
 
     public void SearchPlayer()
     {
-        StartCoroutine(ChangeMaterialOverTime(initialMaterial, 1f)); // Change material back over 1 second
+       // StartCoroutine(ChangeMaterialOverTime(initialMaterial, 1f)); // Change material back over 1 second
         //slowly change to material0 from material1
         agent.acceleration = 10;
         played = false;
@@ -265,18 +265,7 @@ public class GhostNavigation : MonoBehaviour
 
     }
 
-    // New method called ghost speed, depending on "PlayerHandsController.candle" transform, if it is null, then the speed of the agent should we twice its original speed, and when candle is not null, it should be normal
-    public void GhostSpeed()
-    {
-        if (playerhand.Candle == null)
-        {
-            agent.speed = 10;
-        }
-        else
-        {
-            agent.speed = 5;
-        }
-    }
+    // New method called ghost speed, depending on "PlayerHandsController.candle" transform, if it is null, then the speed of the agent should we twice its original speed, and when candle is not null, it should be norma
 
 
     IEnumerator ChangeMaterialOverTime(Material targetMaterial, float duration)
@@ -301,11 +290,14 @@ public class GhostNavigation : MonoBehaviour
 
         if (playerhand.Candle != null && playerhand.Candle.GetComponent<CandleController>().IsLitFam == true)
         {
-            searchDistance = searchAngle * 2;
+            searchDistance = 20;
+            agent.speed = 5;
         }
         else
         {
             searchDistance = 10;
+            agent.speed = 3.5f;
+
         }
     }
 
