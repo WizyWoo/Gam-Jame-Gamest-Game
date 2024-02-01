@@ -21,6 +21,7 @@ public class RoomGenerator : MonoBehaviour
     private List<TunnelPieceController> _unProcessedRooms;
     [SerializeField]
     private List<TunnelPieceController> _generatedRooms;
+    private List<TunnelPieceController> _portalRooms;
 
     private void Awake()
     {
@@ -79,18 +80,25 @@ public class RoomGenerator : MonoBehaviour
         navMesh.BuildNavMesh();
         navmeshObj.transform.position = Vector3.zero;
 
+        _portalRooms = _generatedRooms;
+
+        int portalsSpawned = 0;
         while(true)
         {
 
-            int x = Random.Range(0, _generatedRooms.Count);
+            int x = Random.Range(0, _portalRooms.Count);
 
-            if(_generatedRooms[x].ConnectedRooms.Count == 0)
+            if(_portalRooms[x].ConnectedRooms.Count == 0 && _portalRooms[x].PortalPos != null)
             {
 
-                Instantiate(_portal, _generatedRooms[x].PortalPos.position, Quaternion.identity);
-                break;
+                Instantiate(_portal, _portalRooms[x].PortalPos.position, Quaternion.identity);
+                _portalRooms.RemoveAt(x);
+                portalsSpawned++;
 
             }
+
+            if(portalsSpawned == 4)
+                break;
 
         }
 
