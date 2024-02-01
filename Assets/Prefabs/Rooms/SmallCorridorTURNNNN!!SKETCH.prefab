@@ -1804,6 +1804,7 @@ MonoBehaviour:
   MaxCandles: 0
   MinCandles: 0
   Candle: {fileID: 6666388076854765629, guid: 9e66fafea6b0be047955d02c20632cd3, type: 3}
+  PortalPos: {fileID: 0}
 --- !u!1001 &148621584991173077
 PrefabInstance:
   m_ObjectHideFlags: 0
