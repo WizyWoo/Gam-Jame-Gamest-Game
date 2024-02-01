@@ -227,6 +227,7 @@ MonoBehaviour:
   MaxCandles: 0
   MinCandles: 0
   Candle: {fileID: 0}
+  PortalPos: {fileID: 0}
 --- !u!1 &1540686011657976304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,6 +1582,8 @@ MonoBehaviour:
   - {fileID: 5235043127088373423, guid: 7f0c6ede91c45f949ad420c4198ee9bd, type: 3}
   - {fileID: 3329537765646844237, guid: 8405abe00da81584fbc228f7616c5b9e, type: 3}
   MaxSpawnsAllowed: 040000000400000003000000050000000500000004000000080000000800000006000000
+  _ghost: {fileID: 1156757575621339499, guid: cf1d796a8980dd141b2649e63cc1e667, type: 3}
+  _portal: {fileID: 1865315769274026569, guid: bfeef55823aed9940931bf27833f9f58, type: 3}
   _startPiece: {fileID: 8000768275928061064}
   _rooms: []
   _unProcessedRooms: []
