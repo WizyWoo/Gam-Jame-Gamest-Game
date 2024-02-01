@@ -776,14 +776,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 93036163, guid: a7c35c78bf3bb164aa9419d7ad477fce, type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 93036163, guid: a7c35c78bf3bb164aa9419d7ad477fce, type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 983552337212266497, guid: a7c35c78bf3bb164aa9419d7ad477fce, type: 3}
       propertyPath: m_Name
       value: Player

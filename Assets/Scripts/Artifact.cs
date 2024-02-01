@@ -27,6 +27,7 @@ public class Artifact : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             audioSource.Play();
+            Instantiate(GameObject.Find("Spooky Ghost(Clone)"));
 
 
             portalManager.numberOfArtifacts++;

@@ -22,6 +22,7 @@ public class TextHelp : MonoBehaviour
     void Start()
     {
 
+
     }
 
     // Update is called once per frame
@@ -30,37 +31,39 @@ public class TextHelp : MonoBehaviour
         textTimer += Time.deltaTime;
 
         if (textTimer > 0 && !message1Displayed)
-        
+
         {
-            DisplayText("Press E to pick up candles, and F to blow it out", 6);
+            DisplayText("Press E/LMB to pick up candles, and F/RMB to blow it out", 6);
             message1Displayed = true;
         }
 
         if (textTimer > 10 && !message2Displayed)
-        
+
         {
-            DisplayText("Find the portals and enter them to find the artifacts", 6);
+            DisplayText("Find the <color=#0000ffff>portals</color> and enter them to find the <color=#ffff00ff>artifacts</color>", 6);
+
             message2Displayed = true;
         }
 
         if (textTimer > 20 && !message3Displayed)
-        
+
         {
-            DisplayText("The Artifacts will close the portals", 6);
+            DisplayText("The <color=#ffff00ff>artifacts</color> will close the <color=#0000ffff>portals</color>", 6);
             message3Displayed = true;
         }
 
         if (textTimer > 30 && !message4Displayed)
-        
+
         {
-            DisplayText("Destroy all the portals", 6);
+            DisplayText("Destroy all the <color=#0000ffff>portals</color>", 6);
+
             message4Displayed = true;
         }
 
         if (textTimer > 40 && !message5Displayed)
-        
+
         {
-            DisplayText("Stay away from the ghosts...", 6);
+            DisplayText("Stay away from the <color=#ff0000ff>Ghosts</color>...", 6);
             message5Displayed = true;
         }
 
@@ -89,26 +92,26 @@ public class TextHelp : MonoBehaviour
     }
 
     IEnumerator FadeTextInAndOut(float duration, float delay)
-{
-    // Fade in
-    for (float t = 0; t < duration; t += Time.deltaTime)
     {
-        textObject.color = new Color(textObject.color.r, textObject.color.g, textObject.color.b, Mathf.Lerp(0, 1, t / duration));
-        yield return null;
+        // Fade in
+        for (float t = 0; t < duration; t += Time.deltaTime)
+        {
+            textObject.color = new Color(textObject.color.r, textObject.color.g, textObject.color.b, Mathf.Lerp(0, 1, t / duration));
+            yield return null;
+        }
+
+        textObject.color = new Color(textObject.color.r, textObject.color.g, textObject.color.b, 1);
+
+        // Wait for delay
+        yield return new WaitForSeconds(delay);
+
+        // Fade out
+        for (float t = 0; t < duration; t += Time.deltaTime)
+        {
+            textObject.color = new Color(textObject.color.r, textObject.color.g, textObject.color.b, Mathf.Lerp(1, 0, t / duration));
+            yield return null;
+        }
+
+        textObject.color = new Color(textObject.color.r, textObject.color.g, textObject.color.b, 0);
     }
-
-    textObject.color = new Color(textObject.color.r, textObject.color.g, textObject.color.b, 1);
-
-    // Wait for delay
-    yield return new WaitForSeconds(delay);
-
-    // Fade out
-    for (float t = 0; t < duration; t += Time.deltaTime)
-    {
-        textObject.color = new Color(textObject.color.r, textObject.color.g, textObject.color.b, Mathf.Lerp(1, 0, t / duration));
-        yield return null;
-    }
-
-    textObject.color = new Color(textObject.color.r, textObject.color.g, textObject.color.b, 0);
-}
 }

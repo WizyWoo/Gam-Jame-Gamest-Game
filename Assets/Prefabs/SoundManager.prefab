@@ -178,6 +178,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 38218f638d9bbea4380561072cc357f9, type: 3}
   - {fileID: 8300000, guid: 1c1ad76795097014c884433a4c8f3b00, type: 3}
+  - {fileID: 8300000, guid: 74a6ebcf693a3954084f554049a9eae1, type: 3}
   musicSource: {fileID: 7432305944342580325}
   audioMixerGroup: {fileID: 24300002, guid: a8cccb8339068fc4d83d22b2102a6b76, type: 2}
 --- !u!82 &2988786598377444700
