@@ -755,6 +755,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArtifactRoom2
       objectReference: {fileID: 0}
+    - target: {fileID: 1938442085347120921, guid: 6d08d11c0a441ac47b6be635bc94b307, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938442085347120921, guid: 6d08d11c0a441ac47b6be635bc94b307, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938442085347120921, guid: 6d08d11c0a441ac47b6be635bc94b307, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
