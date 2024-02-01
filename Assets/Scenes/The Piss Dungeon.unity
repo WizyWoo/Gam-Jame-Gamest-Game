@@ -781,34 +781,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8757854301854866259, guid: 9de45a35fc9becb42a07d6e366be0dfe, type: 3}
-      propertyPath: MaxSpawnsAllowed.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757854301854866259, guid: 9de45a35fc9becb42a07d6e366be0dfe, type: 3}
-      propertyPath: MaxSpawnsAllowed.Array.data[0]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757854301854866259, guid: 9de45a35fc9becb42a07d6e366be0dfe, type: 3}
-      propertyPath: MaxSpawnsAllowed.Array.data[1]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757854301854866259, guid: 9de45a35fc9becb42a07d6e366be0dfe, type: 3}
-      propertyPath: MaxSpawnsAllowed.Array.data[2]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757854301854866259, guid: 9de45a35fc9becb42a07d6e366be0dfe, type: 3}
-      propertyPath: MaxSpawnsAllowed.Array.data[3]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757854301854866259, guid: 9de45a35fc9becb42a07d6e366be0dfe, type: 3}
-      propertyPath: MaxSpawnsAllowed.Array.data[4]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757854301854866259, guid: 9de45a35fc9becb42a07d6e366be0dfe, type: 3}
-      propertyPath: MaxSpawnsAllowed.Array.data[5]
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
