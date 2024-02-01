@@ -5,11 +5,13 @@ using UnityEngine;
 public class Artifact : MonoBehaviour
 {   private AudioSource audioSource;
     private Portal[] portal;
+    private TextHelp textHelp;
     // Start is called before the first frame update
     void Start()
     {
         portal = FindObjectsOfType<Portal>();
         audioSource = GetComponent<AudioSource>();
+        textHelp = FindObjectOfType<TextHelp>();
         
     }
 
@@ -24,6 +26,18 @@ public class Artifact : MonoBehaviour
             foreach(Portal p in portal)
             {
                 p.numberOfArtifacts++;
+                if(p.numberOfArtifacts == 1)
+                {
+                   textHelp.DisplayText("You Found the first artifact", 6);
+                }
+                if(p.numberOfArtifacts == 2)
+                {
+                    textHelp.DisplayText("You Found the second artifact", 6);
+                }
+                if(p.numberOfArtifacts == 3)
+                {
+                    textHelp.DisplayText("You Found the third artifact", 6);
+                }
             }
 
             Destroy(gameObject);

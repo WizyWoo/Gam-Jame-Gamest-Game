@@ -291,12 +291,12 @@ public class GhostNavigation : MonoBehaviour
         if (playerhand.Candle != null && playerhand.Candle.GetComponent<CandleController>().IsLitFam == true)
         {
             searchDistance = 20;
-            agent.speed = 5;
+            agent.speed = 3.5f;
         }
         else
         {
             searchDistance = 10;
-            agent.speed = 3.5f;
+            agent.speed = 5f;
 
         }
     }

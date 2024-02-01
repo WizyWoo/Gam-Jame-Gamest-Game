@@ -17,6 +17,7 @@ public class Portal : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         GameObject[] artifacts = GameObject.FindGameObjectsWithTag("Artifact");
+        portalWorlds[1].position = GameObject.Find("ArtifactRoomSpawnPos1").transform.position;
     }
 
     // Update is called once per frame
@@ -69,8 +70,5 @@ public class Portal : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-           
-    }
+
 }

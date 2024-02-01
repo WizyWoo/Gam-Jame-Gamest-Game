@@ -34,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 76370968251824219}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1212220871
 MonoBehaviour:
@@ -185,8 +185,9 @@ MonoBehaviour:
   portalWorlds: []
   numberOfPortalsHit: 0
   numberOfArtifacts: 0
-  portalEffect: {fileID: 0}
-  artifact: []
+  portalEffect: {fileID: 6911976213414925917}
+  artifact:
+  - {fileID: 0}
 --- !u!1 &4281415506160545950
 GameObject:
   m_ObjectHideFlags: 0
