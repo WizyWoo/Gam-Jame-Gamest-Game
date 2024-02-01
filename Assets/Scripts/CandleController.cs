@@ -90,7 +90,7 @@ public class CandleController : MonoBehaviour
     public void PickedUp()
     {
 
-        Destroy(_candleGlowFX);
+        Destroy(_candleGlowFX, 1f);
 
     }
 
