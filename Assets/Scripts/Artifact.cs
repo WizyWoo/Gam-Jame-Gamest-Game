@@ -26,7 +26,7 @@ public class Artifact : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            audioSource.Play();
+            SoundManager.instance.PlaySound(3);
             Instantiate(GameObject.Find("Spooky Ghost(Clone)"));
 
 
