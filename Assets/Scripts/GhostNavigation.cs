@@ -144,8 +144,8 @@ public class GhostNavigation : MonoBehaviour
 
         if (!played)
         {
-            audioSource.Play();
-            played = true;
+            //audioSource.Play();
+            //played = true;
         }
 
 
