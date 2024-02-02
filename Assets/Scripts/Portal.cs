@@ -67,11 +67,7 @@ public class Portal : MonoBehaviour
             }
             else if (portalManager.numberOfPortalsHit == 3 && portalManager.numberOfArtifacts == 3)
             {
-                player.transform.position = portalWorldsPos[3].position;
-            }
-            else if (portalManager.numberOfPortalsHit == 3 && portalManager.numberOfArtifacts == 4)
-            {
-                player.transform.position = portalWorldsPos[0].position;
+                player.transform.position = portalWorldsPos[4].position;
             }
             Destroy(gameObject);
         }

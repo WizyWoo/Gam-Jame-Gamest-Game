@@ -29,6 +29,19 @@ public class CameraController : MonoBehaviour
     void Update()
     {
 
+        if(Time.timeScale == 0)
+        {
+
+            CameraInputEnabled = false;
+
+        }
+        else
+        {
+
+            CameraInputEnabled = true;
+            
+        }
+
         if(CameraInputEnabled)
         {
 
