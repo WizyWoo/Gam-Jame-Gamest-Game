@@ -1232,8 +1232,9 @@ MonoBehaviour:
   _sensitivitySlider: {fileID: 1778646907}
   _gammaSlider: {fileID: 2079043915}
   _postProcessProfile: {fileID: 11400000, guid: 3a50cfdb93ee1a746b9782aa735cfb07, type: 2}
-  _potate: {fileID: 0}
-  _pog: {fileID: 0}
+  _potate: {fileID: 11400000, guid: ebd36081495c56045a411537fe500249, type: 2}
+  _pog: {fileID: 11400000, guid: 3a50cfdb93ee1a746b9782aa735cfb07, type: 2}
+  _postProcessVolume: {fileID: 827282983}
 --- !u!114 &489706339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1756,6 +1757,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9193690347734979709, guid: 6d08d11c0a441ac47b6be635bc94b307, type: 3}
   m_PrefabInstance: {fileID: 764651152}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &827282983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8920546750007748124, guid: 1845c34396a3f4b4784e8d59385cd91a, type: 3}
+  m_PrefabInstance: {fileID: 8920546750982131553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &956842401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,7 +1993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8644753614375858493, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8709851004477521467, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
       propertyPath: m_IsActive
