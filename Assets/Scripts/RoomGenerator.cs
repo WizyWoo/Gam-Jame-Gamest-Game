@@ -48,8 +48,18 @@ public class RoomGenerator : MonoBehaviour
         }
 
         bool allRoomsProcessed = false;
+        int runs = 0, maxRuns = 200;
         while(!allRoomsProcessed)
         {
+
+            if(runs >= maxRuns)
+            {
+
+                break;
+
+            }
+
+            runs++;
 
             if(RoomPieces.Count == 0)
             {
@@ -128,29 +138,35 @@ public class RoomGenerator : MonoBehaviour
 
         }
 
-        while(!allPortalsSpawned)
+        if(!allPortalsSpawned)
         {
 
-            int x = Random.Range(0, _portalRooms.Count);
-
-            if(DifficultyController.Instance.Difficulty == 0 && portalsSpawned == 6)
-                break;
-            else if(DifficultyController.Instance.Difficulty != 0 && portalsSpawned == 4)
-                break;
-
-            if(Vector3.Distance(_portalRooms[x].transform.position, Vector3.zero) > 15 && _portalRooms[x].PortalPos != null)
+            for(int i = _portalRooms.Count - 1; i >= 0; i--)
             {
 
-                Instantiate(_portal, _portalRooms[x].PortalPos.position, Quaternion.identity);
-                _portalRooms.RemoveAt(x);
-                portalsSpawned++;
+                if(_portalRooms[i].PortalPos != null)
+                {
+
+                    Instantiate(_portal, _portalRooms[i].PortalPos.position, Quaternion.identity);
+                    _portalRooms.RemoveAt(i);
+                    portalsSpawned++;
+
+                }
+
+                if(DifficultyController.Instance.Difficulty == 0 && portalsSpawned == 6)
+                {
+
+                    break;
+
+                }
+                else if(DifficultyController.Instance.Difficulty != 0 && portalsSpawned == 4)
+                {
+
+                    break;
+
+                }
 
             }
-
-            if(DifficultyController.Instance.Difficulty == 0 && portalsSpawned == 6)
-                break;
-            else if(DifficultyController.Instance.Difficulty != 0 && portalsSpawned == 4)
-                break;
 
         }
 
