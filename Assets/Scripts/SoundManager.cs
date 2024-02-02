@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip[] audioClips;
     public AudioSource musicSource;
     public AudioMixerGroup audioMixerGroup;
+    public float pitch, timer, piss;
 
     // Start is called before the first frame update
 
@@ -37,12 +38,14 @@ public class SoundManager : MonoBehaviour
     }
     void Start()
     {
-
+        pitch = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer+= Time.deltaTime * 0.2f;
+        musicSource.pitch = Mathf.Lerp(piss,pitch, timer);
 
     }
 
@@ -84,5 +87,7 @@ public class SoundManager : MonoBehaviour
             audioSources[i].pitch = pitch;
         }
     }
+
+
 
 }

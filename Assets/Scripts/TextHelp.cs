@@ -33,14 +33,14 @@ public class TextHelp : MonoBehaviour
         if (textTimer > 0 && !message1Displayed)
 
         {
-            DisplayText("Press E/LMB to pick up candles, and F/RMB to blow it out", 4);
+            DisplayText("If you need help, check the controlls/How to play in menu", 4);
             message1Displayed = true;
         }
 
         if (textTimer > 8 && !message2Displayed)
 
         {
-            DisplayText("Find the <color=#0000ffff>portals</color> and enter them to find the <color=#ffff00ff>artifacts</color>", 4);
+            DisplayText("0 / 4 Portals Closed", 4);
 
             message2Displayed = true;
         }
@@ -48,35 +48,8 @@ public class TextHelp : MonoBehaviour
         if (textTimer > 16 && !message3Displayed)
 
         {
-            DisplayText("The <color=#ffff00ff>artifacts</color> will close the <color=#0000ffff>portals</color>", 4);
+            DisplayText("Good Luck", 4);
             message3Displayed = true;
-        }
-
-        if (textTimer > 22 && !message4Displayed)
-
-        {
-            DisplayText("Destroy all the <color=#0000ffff>portals</color>", 4);
-
-            message4Displayed = true;
-        }
-
-        if (textTimer > 30 && !message5Displayed)
-
-        {
-            DisplayText("Stay away from the <color=#ff0000ff>Ghosts</color>...", 4);
-            message5Displayed = true;
-        }
-
-        if (textTimer > 38 && !message6Displayed)
-        {
-            DisplayText("And dont let the candles burn out..", 4);
-            message6Displayed = true;
-        }
-
-        if (textTimer > 46 && !message7Displayed)
-        {
-            DisplayText("Good luck", 4);
-            message7Displayed = true;
         }
 
 
