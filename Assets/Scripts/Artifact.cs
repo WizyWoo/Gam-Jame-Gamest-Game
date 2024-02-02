@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Artifact : MonoBehaviour
 {
+    public GameObject ObjectToActivate;
     private AudioSource audioSource;
     private Portal[] portal;
     private TextHelp textHelp;
@@ -48,6 +49,10 @@ public class Artifact : MonoBehaviour
                 textHelp.DisplayText("All Portals Destroyed... Thank you, for your saccrifice", 4);
             }
 
+            if(ObjectToActivate)
+            {
+                ObjectToActivate.SetActive(true);
+            }
 
             Destroy(gameObject);
         }
