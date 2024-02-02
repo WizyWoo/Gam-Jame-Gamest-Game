@@ -30,11 +30,10 @@ public class Artifact : MonoBehaviour
             SoundManager.instance.timer = 0;
             SoundManager.instance.PlaySound(3);
             Instantiate(GameObject.Find("Spooky Ghost(Clone)"));
-          //  if (DifficultyController.Instance.Difficulty == 2)
-          //  {
-          //      Instantiate(GameObject.Find("Spooky Ghost(Clone)"));
-//
-          //  }
+           if (DifficultyController.Instance.Difficulty == 2)
+           {
+               Instantiate(GameObject.Find("Spooky Ghost(Clone)"));
+           }
 
 
 
