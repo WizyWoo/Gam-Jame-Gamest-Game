@@ -1574,6 +1574,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 158367828725186105, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.9993896
+      objectReference: {fileID: 0}
+    - target: {fileID: 158367828725186105, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0477247
+      objectReference: {fileID: 0}
+    - target: {fileID: 158367828725186105, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.007080078
+      objectReference: {fileID: 0}
+    - target: {fileID: 158367828725211673, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045259363234200354, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045259363234200354, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045259363234200354, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045259363234200365, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1190275433607088708, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1654,6 +1686,18 @@ PrefabInstance:
       propertyPath: m_Range
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5657860953197300776, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.9620972
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657860953197300776, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11627519
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657860953197300776, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9400024
+      objectReference: {fileID: 0}
     - target: {fileID: 5734295405042746631, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
       propertyPath: hardreward
       value: 
@@ -1663,6 +1707,10 @@ PrefabInstance:
       value: End Room
       objectReference: {fileID: 0}
     - target: {fileID: 8644753614375858493, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709851004477521467, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1696,7 +1744,22 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101575942}
-  m_Text: You Win YIPPEEE
+  m_Text: 'You Destroyed all the portals
+
+    Enjoy Your eternity...
+
+
+
+
+
+
+
+
+
+
+
+    Try
+    a harder difficulty... Noob'
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
