@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour
 
         }
 
-        int vSync = PlayerPrefs.GetInt("Vsync");
+        int vSync = PlayerPrefs.GetInt("Vsync", 1);
 
         if(vSync == 0)
         {
