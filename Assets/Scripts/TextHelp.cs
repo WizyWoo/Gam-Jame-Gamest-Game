@@ -33,49 +33,49 @@ public class TextHelp : MonoBehaviour
         if (textTimer > 0 && !message1Displayed)
 
         {
-            DisplayText("Press E/LMB to pick up candles, and F/RMB to blow it out", 6);
+            DisplayText("Press E/LMB to pick up candles, and F/RMB to blow it out", 4);
             message1Displayed = true;
         }
 
-        if (textTimer > 10 && !message2Displayed)
+        if (textTimer > 8 && !message2Displayed)
 
         {
-            DisplayText("Find the <color=#0000ffff>portals</color> and enter them to find the <color=#ffff00ff>artifacts</color>", 6);
+            DisplayText("Find the <color=#0000ffff>portals</color> and enter them to find the <color=#ffff00ff>artifacts</color>", 4);
 
             message2Displayed = true;
         }
 
-        if (textTimer > 20 && !message3Displayed)
+        if (textTimer > 16 && !message3Displayed)
 
         {
-            DisplayText("The <color=#ffff00ff>artifacts</color> will close the <color=#0000ffff>portals</color>", 6);
+            DisplayText("The <color=#ffff00ff>artifacts</color> will close the <color=#0000ffff>portals</color>", 4);
             message3Displayed = true;
         }
 
-        if (textTimer > 30 && !message4Displayed)
+        if (textTimer > 22 && !message4Displayed)
 
         {
-            DisplayText("Destroy all the <color=#0000ffff>portals</color>", 6);
+            DisplayText("Destroy all the <color=#0000ffff>portals</color>", 4);
 
             message4Displayed = true;
         }
 
-        if (textTimer > 40 && !message5Displayed)
+        if (textTimer > 30 && !message5Displayed)
 
         {
-            DisplayText("Stay away from the <color=#ff0000ff>Ghosts</color>...", 6);
+            DisplayText("Stay away from the <color=#ff0000ff>Ghosts</color>...", 4);
             message5Displayed = true;
         }
 
-        if (textTimer > 50 && !message6Displayed)
+        if (textTimer > 38 && !message6Displayed)
         {
-            DisplayText("And dont let the candles burn out..", 6);
+            DisplayText("And dont let the candles burn out..", 4);
             message6Displayed = true;
         }
 
-        if (textTimer > 60 && !message7Displayed)
+        if (textTimer > 46 && !message7Displayed)
         {
-            DisplayText("Good luck", 6);
+            DisplayText("Good luck", 4);
             message7Displayed = true;
         }
 
