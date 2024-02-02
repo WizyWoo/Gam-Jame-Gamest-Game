@@ -740,6 +740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8664039108017025752}
+  - component: {fileID: 6849615111938991216}
   m_Layer: 0
   m_Name: Hell
   m_TagString: Untagged
@@ -952,6 +953,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6849615111938991216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8664039108017025755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8ea8cf650eacb4aab0fc2383f0599c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8664039108249266811
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,12 +58,14 @@ public class Portal : MonoBehaviour
             }
             else if (portalManager.numberOfPortalsHit == 2 && portalManager.numberOfArtifacts == 2)
             {
+                portalWorldsPos[3].root.gameObject.SetActive(true);
                 player.transform.position = portalWorldsPos[3].position;
             }
             else if (portalManager.numberOfPortalsHit == 2 && portalManager.numberOfArtifacts == 3)
             {
                 player.transform.position = portalWorldsPos[0].position;
                 portalManager.numberOfPortalsHit++;
+                portalWorldsPos[3].root.gameObject.SetActive(false);
             }
             else if (portalManager.numberOfPortalsHit == 3 && portalManager.numberOfArtifacts == 3)
             {

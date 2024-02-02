@@ -15,7 +15,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private Slider _sensitivitySlider, _gammaSlider;
     [SerializeField]
-    private PostProcessProfile _postProcessProfile;
+    private PostProcessProfile _postProcessProfile, _potate, _pog;
+    [SerializeField]
+    private PostProcessVolume _postProcessVolume;
 
     private void Update()
     {
@@ -42,6 +44,19 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
+
+        if(PlayerPrefs.GetInt("Pog", 1) == 1)
+        {
+
+            PPFX(1);
+
+        }
+        else
+        {
+
+            PPFX(0);
+
+        }
 
         _sensitivitySlider.value = PlayerPrefs.GetFloat("MouseSensitivity", 3);
         _gammaSlider.value = PlayerPrefs.GetFloat("Gamma", 1.1f);
@@ -72,6 +87,31 @@ public class PauseMenu : MonoBehaviour
         PlayerPrefs.Save();
 
     }
+
+    public void PPFX(int pog)
+    {
+
+        if(pog == 1)
+        {
+
+            _postProcessProfile = _pog;
+            PlayerPrefs.SetInt("Pog", 1);
+
+        }
+        else
+        {
+
+            _postProcessProfile = _potate;
+            PlayerPrefs.SetInt("Pog", 0);
+
+        }
+
+        _postProcessVolume.profile = _postProcessProfile;
+
+        PlayerPrefs.Save();
+
+    }
+
 
     public void MainMenu()
     {

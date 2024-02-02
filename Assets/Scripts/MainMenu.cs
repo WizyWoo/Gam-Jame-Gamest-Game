@@ -32,6 +32,26 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    public void PPFX(int pog)
+    {
+
+        if(pog == 1)
+        {
+
+            PlayerPrefs.SetInt("Pog", 1);
+
+        }
+        else
+        {
+
+            PlayerPrefs.SetInt("Pog", 0);
+
+        }
+
+        PlayerPrefs.Save();
+
+    }
+
     public void QuitGame()
     {
 

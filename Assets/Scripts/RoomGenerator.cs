@@ -210,7 +210,6 @@ public class RoomGenerator : MonoBehaviour
             Vector3 testDir = room.Available[y];
             ModAvailableDir(ref testDir, room);
 
-            Debug.Log("On Check Dir " + testDir);
 
             if(CheckLoc(room.transform.position + (testDir * 15)))
             {
@@ -230,14 +229,12 @@ public class RoomGenerator : MonoBehaviour
     private bool CheckLoc(Vector3 location)
     {
 
-        Debug.Log("inside the Check Dir " + location);
         foreach(Vector2 room in _rooms)
         {
             
             if(Mathf.RoundToInt(room.x) == Mathf.RoundToInt(location.x) && Mathf.RoundToInt(room.y) == Mathf.RoundToInt(location.z))
             {
 
-                Debug.LogError("Room already exists at " + location);
                 return true;
 
             }
