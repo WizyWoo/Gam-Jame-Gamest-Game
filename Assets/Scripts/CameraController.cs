@@ -23,6 +23,7 @@ public class CameraController : MonoBehaviour
         player = transform.root;
         pMC = player.GetComponent<PlayerMovementController>();
         rB = player.GetComponent<Rigidbody>();
+        InputSensitivity = PlayerPrefs.GetFloat("MouseSensitivity", 3);
 
     }
 

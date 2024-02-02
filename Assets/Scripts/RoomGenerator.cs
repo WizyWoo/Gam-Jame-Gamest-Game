@@ -8,7 +8,8 @@ public class RoomGenerator : MonoBehaviour
 {
 
     public List<GameObject> RoomPieces;
-    public List<int> MaxSpawnsAllowed;
+    public List<int>  EasyMaxSpawns, NormalMaxSpawns, HardMaxSpawns;
+    private List<int> _maxSpawnsAllowed;
     [SerializeField]
     private GameObject _ghost, _portal;
     [SerializeField]
@@ -30,6 +31,21 @@ public class RoomGenerator : MonoBehaviour
         _unProcessedRooms.Add(_startPiece);
         _generatedRooms.Add(_startPiece);
         _rooms.Add(new Vector2((int)_startPiece.transform.position.x, (int)_startPiece.transform.position.z));
+
+        switch(DifficultyController.Instance.Difficulty)
+        {
+
+            case 0:
+                _maxSpawnsAllowed = new List<int>(EasyMaxSpawns);
+                break;
+            case 1:
+                _maxSpawnsAllowed = new List<int>(NormalMaxSpawns);
+                break;
+            case 2:
+                _maxSpawnsAllowed = new List<int>(HardMaxSpawns);
+                break;
+
+        }
 
         bool allRoomsProcessed = false;
         while(!allRoomsProcessed)
@@ -95,7 +111,14 @@ public class RoomGenerator : MonoBehaviour
 
             }
 
-            if(portalsSpawned == 4)
+            if(DifficultyController.Instance.Difficulty == 0 && portalsSpawned == 6)
+            {
+
+                allPortalsSpawned = true;
+                break;
+
+            }
+            else if(DifficultyController.Instance.Difficulty != 0 && portalsSpawned == 4)
             {
 
                 allPortalsSpawned = true;
@@ -110,7 +133,9 @@ public class RoomGenerator : MonoBehaviour
 
             int x = Random.Range(0, _portalRooms.Count);
 
-            if(portalsSpawned == 4)
+            if(DifficultyController.Instance.Difficulty == 0 && portalsSpawned == 6)
+                break;
+            else if(DifficultyController.Instance.Difficulty != 0 && portalsSpawned == 4)
                 break;
 
             if(Vector3.Distance(_portalRooms[x].transform.position, Vector3.zero) > 15 && _portalRooms[x].PortalPos != null)
@@ -122,7 +147,9 @@ public class RoomGenerator : MonoBehaviour
 
             }
 
-            if(portalsSpawned == 4)
+            if(DifficultyController.Instance.Difficulty == 0 && portalsSpawned == 6)
+                break;
+            else if(DifficultyController.Instance.Difficulty != 0 && portalsSpawned == 4)
                 break;
 
         }
@@ -214,18 +241,18 @@ public class RoomGenerator : MonoBehaviour
 
             int roomIndex = Random.Range(0, RoomPieces.Count);
 
-            if(MaxSpawnsAllowed[roomIndex] > 0)
+            if(_maxSpawnsAllowed[roomIndex] > 0)
             {
 
                 selectedRoomType = RoomPieces[roomIndex];
-                MaxSpawnsAllowed[roomIndex]--;
+                _maxSpawnsAllowed[roomIndex]--;
                 roomSelected = true;
 
-                if(MaxSpawnsAllowed[roomIndex] == 0)
+                if(_maxSpawnsAllowed[roomIndex] == 0)
                 {
 
                     RoomPieces.RemoveAt(roomIndex);
-                    MaxSpawnsAllowed.RemoveAt(roomIndex);
+                    _maxSpawnsAllowed.RemoveAt(roomIndex);
 
                 }
 

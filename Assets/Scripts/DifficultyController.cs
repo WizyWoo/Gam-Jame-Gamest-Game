@@ -13,7 +13,7 @@ public class DifficultyController : MonoBehaviour
 
         if(Instance == null)
         {
-            
+
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
