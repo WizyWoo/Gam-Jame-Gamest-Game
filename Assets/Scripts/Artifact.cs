@@ -33,15 +33,19 @@ public class Artifact : MonoBehaviour
             portalManager.numberOfArtifacts++;
             if (portalManager.numberOfArtifacts == 1)
             {
-                textHelp.DisplayText("You Found the first artifact", 6);
+                textHelp.DisplayText("1 / 4 Portals Destroyed", 4);
             }
             if (portalManager.numberOfArtifacts == 2)
             {
-                textHelp.DisplayText("You Found the second artifact", 6);
+                textHelp.DisplayText("2 / 4 Portals Destroyed", 4);
             }
             if (portalManager.numberOfArtifacts == 3)
             {
-                textHelp.DisplayText("You Found the third artifact", 6);
+                textHelp.DisplayText("3 / 4 Portals Destroyed", 4);
+            }
+            if (portalManager.numberOfArtifacts == 4)
+            {
+                textHelp.DisplayText("All Portals Destroyed... Thank you, for your saccrifice", 4);
             }
 
 

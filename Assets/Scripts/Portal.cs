@@ -22,6 +22,8 @@ public class Portal : MonoBehaviour
         portalWorldsPos[0] = GameObject.FindGameObjectWithTag("StarterPoss").transform;
         portalWorldsPos[1] = GameObject.Find("ArtifactRoomSpawnPos1").transform;
         portalWorldsPos[2] = GameObject.Find("ArtifactRoomSpawnPos2").transform;
+        portalWorldsPos[3] = GameObject.Find("ArtifactRoomSpawnPos3").transform;
+        portalWorldsPos[4] = GameObject.Find("ArtifactRoomSpawnPos4").transform;
 
     }
 
