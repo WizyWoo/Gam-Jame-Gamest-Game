@@ -11,7 +11,7 @@ public class RoomGenerator : MonoBehaviour
     public List<int>  EasyMaxSpawns, NormalMaxSpawns, HardMaxSpawns;
     private List<int> _maxSpawnsAllowed;
     [SerializeField]
-    private GameObject _ghost, _portal;
+    private GameObject _ghost, _portal, navmeshObj;
     [SerializeField]
     private TunnelPieceController _startPiece;
     [SerializeField]
@@ -90,7 +90,7 @@ public class RoomGenerator : MonoBehaviour
 
         }
 
-        GameObject navmeshObj = new GameObject("NavMesh");
+        //GameObject navmeshObj = new GameObject("NavMesh");
 
         foreach(GameObject floor in floors)
         {
@@ -99,9 +99,10 @@ public class RoomGenerator : MonoBehaviour
 
         }
 
-        NavMeshSurface navMesh = navmeshObj.AddComponent<NavMeshSurface>();
+        //NavMeshSurface navMesh = navmeshObj.AddComponent<NavMeshSurface>();
         navmeshObj.transform.position = Vector3.up * 100 + Vector3.right * 100;
-        navMesh.BuildNavMesh();
+        //navMesh.BuildNavMesh();
+        navmeshObj.GetComponent<NavMeshSurface>().BuildNavMesh();
         navmeshObj.transform.position = Vector3.zero;
 
         _portalRooms = _generatedRooms;
