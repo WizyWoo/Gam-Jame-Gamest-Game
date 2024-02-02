@@ -1008,11 +1008,24 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3778983932513358637, guid: 6d08d11c0a441ac47b6be635bc94b307, type: 3}
+      propertyPath: ObjectToActivate
+      value: 
+      objectReference: {fileID: 764651153}
+    - target: {fileID: 9193690347734979709, guid: 6d08d11c0a441ac47b6be635bc94b307, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d08d11c0a441ac47b6be635bc94b307, type: 3}
+--- !u!1 &764651153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9193690347734979709, guid: 6d08d11c0a441ac47b6be635bc94b307, type: 3}
+  m_PrefabInstance: {fileID: 764651152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &956842401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,6 +1189,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5215507373489698107, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
+      propertyPath: m_Range
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8072358302385871984, guid: 9b9a9918642035e44a6cf5a2328533f3, type: 3}
       propertyPath: m_Name
       value: End Room
@@ -1272,6 +1289,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1605529274047047882, guid: 2604823efada11b45a8a949f3cf6ebfb, type: 3}
+      propertyPath: ObjectToActivate
+      value: 
+      objectReference: {fileID: 1117705082}
+    - target: {fileID: 8201014970146302897, guid: 2604823efada11b45a8a949f3cf6ebfb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302991610930572860, guid: 2604823efada11b45a8a949f3cf6ebfb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 36.55
+      objectReference: {fileID: 0}
     - target: {fileID: 8664039108017025752, guid: 2604823efada11b45a8a949f3cf6ebfb, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1325,6 +1354,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2604823efada11b45a8a949f3cf6ebfb, type: 3}
+--- !u!1 &1117705082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8201014970146302897, guid: 2604823efada11b45a8a949f3cf6ebfb, type: 3}
+  m_PrefabInstance: {fileID: 1117705081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1171979935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 837904687489396815, guid: bfeef55823aed9940931bf27833f9f58, type: 3}
@@ -1730,6 +1764,10 @@ PrefabInstance:
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3357186215832981780, guid: e9eb76e8643160744b03d8429426ad54, type: 3}
+      propertyPath: ObjectToActivate
+      value: 
+      objectReference: {fileID: 2052507126}
     - target: {fileID: 4179509815456589876, guid: e9eb76e8643160744b03d8429426ad54, type: 3}
       propertyPath: m_Name
       value: Artifact
@@ -1844,11 +1882,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 1865315769274026569, guid: bfeef55823aed9940931bf27833f9f58, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfeef55823aed9940931bf27833f9f58, type: 3}
+--- !u!1 &2052507126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1865315769274026569, guid: bfeef55823aed9940931bf27833f9f58, type: 3}
+  m_PrefabInstance: {fileID: 2052507125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &70707099899801374
 GameObject:
   m_ObjectHideFlags: 0
