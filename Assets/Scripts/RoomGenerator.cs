@@ -22,7 +22,7 @@ public class RoomGenerator : MonoBehaviour
     public List<TunnelPieceController> _generatedRooms;
     private List<TunnelPieceController> _portalRooms;
 
-    private void Awake()
+    private void Start()
     {
 
         _rooms = new List<Vector2>();
